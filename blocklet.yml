@@ -1,0 +1,45 @@
+name: profile-demo
+version: 1.0.0
+main: api/index.js
+author:
+  name: ArcBlock
+license: ''
+title: Profile Demo
+description: Blocklet that show profile of login user, can be combined by other blocklets.
+group: dapp
+specVersion: 1.0.0
+files:
+  - blocklet.md
+  - README.md
+  - build
+keywords:
+  - dapp
+  - demo
+  - auth
+  - profile
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: http
+    services:
+      - name: '@abtnode/auth-service'
+        config:
+          blockUnauthenticated: false
+did: z8iZqG23gxzv6CbTmtWFAipHGLjPEha4BjAtE
+community: ''
+documentation: ''
+homepage: ''
+timeout:
+  start: 60
+requirements:
+  abtnode: '>=1.2.5'
+  os: '*'
+  cpu: '*'
+environments: []
+scripts:
+  dev: npm run start
+screenshots: []
+children: []
