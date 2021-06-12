@@ -39,6 +39,7 @@ server.use(
   })
 );
 
+// 通过全局的中间件来组装当前登录的用户信息
 server.use((req, res, next) => {
   if (req.headers['x-user-did']) {
     req.user = {
