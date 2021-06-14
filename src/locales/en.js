@@ -8,4 +8,5 @@ module.exports = flat({
   role: 'Role',
   lastLogin: 'Last Login',
   createdAt: 'Created At',
+  passports: 'Passports',
 });

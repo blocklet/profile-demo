@@ -48,6 +48,12 @@ export default function Main() {
         { name: t('did'), value: <DidAddress>{user.did}</DidAddress> },
         { name: t('email'), value: user.email },
         {
+          name: t('passports'),
+          value: user.passports ?
+            user.passports.map(passport => <Tag type={passport.name === 'owner' ? 'success' : 'default'}>{passport.title}</Tag>)
+            : '--',
+        },
+        {
           name: t('role'),
           value: <Tag type={user.role === 'owner' ? 'success' : 'default'}>{user.role}</Tag>,
         },
