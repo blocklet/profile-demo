@@ -1,3 +1,7 @@
+## 1.1.2 (July 03, 2021)
+
+
+
 ## 1.1.1 (June 14, 2021)
 
 - update passports and role in user profile
