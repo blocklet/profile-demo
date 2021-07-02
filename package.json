@@ -19,9 +19,9 @@
     "coverage": "npm run test -- --coverage"
   },
   "dependencies": {
-    "@arcblock/did-react": "^1.14.0",
-    "@arcblock/ux": "^1.14.0",
-    "@blocklet/sdk": "^1.3.13",
+    "@arcblock/did-react": "^1.14.6",
+    "@arcblock/ux": "^1.14.6",
+    "@blocklet/sdk": "^1.3.15",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
