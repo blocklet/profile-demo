@@ -1,3 +1,7 @@
+## 1.1.3 (August 07, 2021)
+
+- upgrade @blocklet/sdk
+
 ## 1.1.2 (July 03, 2021)
 
 
