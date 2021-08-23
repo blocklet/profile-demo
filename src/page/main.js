@@ -8,7 +8,7 @@ import InfoRow from '@arcblock/ux/lib/InfoRow';
 import Button from '@arcblock/ux/lib/Button';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
-import DidAddress from '@arcblock/did-react/lib/Address';
+import DidAddress from '@arcblock/did-connect/lib/Address';
 
 import { useSessionContext } from '../libs/session';
 

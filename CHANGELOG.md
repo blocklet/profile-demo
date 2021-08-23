@@ -1,3 +1,7 @@
+## 1.1.4 (August 23, 2021)
+
+- chore: replace did-react with did-connect
+
 ## 1.1.3 (August 07, 2021)
 
 - upgrade @blocklet/sdk
