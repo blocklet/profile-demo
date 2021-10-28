@@ -1,3 +1,7 @@
+## 1.1.5 (October 28, 2021)
+
+chore: bump deps to latest
+
 ## 1.1.4 (August 23, 2021)
 
 - chore: replace did-react with did-connect
