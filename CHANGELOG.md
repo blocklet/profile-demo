@@ -1,3 +1,7 @@
+## 1.1.9 (December 03, 2021)
+
+- chore: update arcblock-related deps
+
 ## 1.1.8 (November 24, 2021)
 
 - upgrade arcblock deps
