@@ -1,3 +1,7 @@
+## 1.1.10 (十二月 08, 2021)
+
+- chore: upgrade blocklet.yml
+
 ## 1.1.9 (December 03, 2021)
 
 - chore: update arcblock-related deps
@@ -28,8 +32,6 @@ chore: bump deps to latest
 
 ## 1.1.2 (July 03, 2021)
 
-
-
 ## 1.1.1 (June 14, 2021)
 
 - update passports and role in user profile
@@ -39,7 +41,5 @@ chore: bump deps to latest
 - chore: format code
 
 ## 1.0.1 (May 28, 2021)
-
-
 
 ## 1.0.0
