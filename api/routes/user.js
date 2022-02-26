@@ -1,4 +1,3 @@
-const env = require('../libs/env');
 const AuthService = require('@blocklet/sdk/service/auth');
 
 const authClient = new AuthService();
@@ -17,11 +16,6 @@ module.exports = {
       const { user } = await authClient.getUser(req.user.did);
       user.role = req.user.role;
       res.json({ user });
-    });
-
-    app.get('/api/env', (req, res) => {
-      res.type('js');
-      res.send(`window.env = ${JSON.stringify(env, null, 2)}`);
     });
   },
 };

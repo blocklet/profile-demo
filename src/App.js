@@ -10,9 +10,9 @@ import { SessionProvider } from './libs/session';
 import { translations } from './locales';
 import Main from './page/main';
 
-let apiPrefix = '/';
+let prefix = '/';
 if (window.blocklet && window.blocklet.prefix) {
-  apiPrefix = window.blocklet.prefix;
+  prefix = window.blocklet.prefix;
 }
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <LocaleProvider translations={translations}>
-          <SessionProvider serviceHost={apiPrefix} webWalletUrl={webWalletUrl}>
+          <SessionProvider serviceHost={prefix} webWalletUrl={webWalletUrl}>
             <CssBaseline />
             <Main />
           </SessionProvider>
