@@ -1,3 +1,8 @@
+## 1.2.0 (February 26, 2022)
+
+- chore(deps): bump chain and common deps to latest
+- [skip ci] Update README.md
+
 ## 1.1.11 (December 28, 2021)
 
 - docs: update docs (abtnode rebranding)
