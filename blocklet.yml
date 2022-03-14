@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.2.1
+version: 1.3.0
 main: api/index.js
 author:
   name: ArcBlock
@@ -24,10 +24,6 @@ interfaces:
     prefix: '*'
     port: BLOCKLET_PORT
     protocol: http
-    services:
-      - name: '@abtnode/auth-service'
-        config:
-          blockUnauthenticated: false
 did: z8iZqG23gxzv6CbTmtWFAipHGLjPEha4BjAtE
 community: ''
 documentation: ''
@@ -35,7 +31,7 @@ homepage: ''
 timeout:
   start: 60
 requirements:
-  abtnode: '>=1.2.5'
+  server: '>=1.6.29'
   os: '*'
   cpu: '*'
 environments: []
