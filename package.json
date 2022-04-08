@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -19,9 +19,9 @@
     "coverage": "npm run test -- --coverage"
   },
   "dependencies": {
-    "@arcblock/did-connect": "^1.16.41",
-    "@arcblock/ux": "^1.16.41",
-    "@blocklet/sdk": "1.6.30",
+    "@arcblock/did-connect": "^1.16.70",
+    "@arcblock/ux": "^1.16.70",
+    "@blocklet/sdk": "1.7.5",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
