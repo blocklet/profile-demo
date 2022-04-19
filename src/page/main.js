@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 
 import Avatar from '@material-ui/core/Avatar';
+import Header from '@arcblock/ux/lib/Layout/header';
+import Footer from '@arcblock/ux/lib/Layout/footer';
+import { getWebWalletUrl } from '@arcblock/did-connect/lib/utils';
+import SessionManager from '@arcblock/did-connect/lib/SessionManager';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import Button from '@arcblock/ux/lib/Button';
@@ -24,6 +28,7 @@ export default function Main() {
   const { session, api } = useSessionContext();
   const [user, setUser] = useState();
   const { t } = useLocaleContext();
+  const webWalletUrl = getWebWalletUrl();
 
   useEffect(() => {
     getData();
@@ -64,6 +69,18 @@ export default function Main() {
 
   return (
     <Container>
+      <Header {...{
+        appLogo: <img src={window.blocklet.appLogo} style={{borderRadius: 8, width: 40, height: 40}}/>,
+        navigation: window.blocklet.navigation || [],
+        theme: window.blocklet.theme || {},
+        addons: [
+          <SessionManager session={session} webWalletUrl={webWalletUrl} showRole />
+        ],
+        style: {
+          marginBottom: 16,
+        },
+      }}></Header>
+
       <Media className="header">
         <div className="left">
           <div style={{ fontSize: 20 }}>Profile Demo</div>
@@ -106,6 +123,14 @@ export default function Main() {
           })}
         </div>
       )}
+
+      <Footer {...{
+        navigation: window.blocklet.navigation || [],
+        theme: window.blocklet.theme || {},
+        style: {
+          marginTop: 16
+        }
+      }}></Footer>
     </Container>
   );
 }

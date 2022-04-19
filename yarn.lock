@@ -39,16 +39,16 @@
     lodash "^4.17.21"
     semver "^7.3.4"
 
-"@arcblock/did-connect@^1.16.41":
-  version "1.16.41"
-  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-1.16.41.tgz#923cd9709d3afd4f124e3d7a9fc8edfc176af31c"
-  integrity sha512-dcft+ObK+R9i/snCDjLmjq3K7Y9mpew5b28T1J/9Q7P2YsyebD82ezVpeJ3RYWtYAJt4m78jkmD3SpMzl8FU8A==
+"@arcblock/did-connect@^1.17.2":
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-1.17.2.tgz#358a327810b9afd8b4357f61bb3d3f62595a5f4f"
+  integrity sha512-nwrMGnIdRrpAqCWO+p0NJUfMsc0gahqysghP9/D+97oCHeNc7nr4I+ZxZUTe2G2Qpupi03ys9Wg1cdWsufraNQ==
   dependencies:
-    "@arcblock/did-motif" "^1.1.1"
+    "@arcblock/did-motif" "^1.1.4"
     "@arcblock/event-client" "^1.0.23"
-    "@arcblock/icons" "^1.16.41"
-    "@arcblock/react-hooks" "^1.16.41"
-    "@arcblock/ux" "^1.16.41"
+    "@arcblock/icons" "^1.17.2"
+    "@arcblock/react-hooks" "^1.17.2"
+    "@arcblock/ux" "^1.17.2"
     "@fontsource/rubik" "^4.5.0"
     "@fontsource/ubuntu-mono" "^4.4.5"
     "@material-ui/core" "^4.12.3"
@@ -58,10 +58,11 @@
     dsbridge "3.1.4"
     js-cookie "^2.2.1"
     mdi-material-ui "^6.22.1"
-    qrcode.react "^1.0.0"
     querystring "^0.2.1"
     react-use "^17.2.4"
     styled-components "^5.0.0"
+    tweetnacl "^1.0.3"
+    tweetnacl-sealedbox-js "^1.2.0"
 
 "@arcblock/did-ext@^1.14.20":
   version "1.14.23"
@@ -77,10 +78,10 @@
     debug "^4.3.3"
     lodash "^4.17.21"
 
-"@arcblock/did-motif@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@arcblock/did-motif/-/did-motif-1.1.1.tgz#f60b35d6ca8732414c6c3452c0a6f47de30f75d1"
-  integrity sha512-7FLy231VqkqX2onWhlAzoF8Jd2ddOvKnxLSTbM0AoivWepH4M09wW0d1AItVStkVMLIbCNDGHLJ8C+0lPwF7rw==
+"@arcblock/did-motif@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@arcblock/did-motif/-/did-motif-1.1.4.tgz#b43e6cc757b09a49c3d0a8fd135e42f7d521395f"
+  integrity sha512-ubvgKhDoYKL4Uenugu8nGlvDt1zz5U6u427yC74/0TGTcMS8GBgdh1KycDFQf0lp83XI6M8neGyycPqAximQJw==
   dependencies:
     multibase "^4.0.6"
 
@@ -129,10 +130,10 @@
     amp-message "~0.1.1"
     axon "^2.0.3"
 
-"@arcblock/icons@^1.16.41":
-  version "1.16.41"
-  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-1.16.41.tgz#46eaadaeddbeb11cf891aafd8e8a370e8f57e64e"
-  integrity sha512-44UzHEFzMdGJLe293plXOUxmLjssQgMFYErw+SFvsFtBQ9sdQMfMXYHsvE4feLibVv/efIVwrM77+iiLuI3kcQ==
+"@arcblock/icons@^1.17.2":
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-1.17.2.tgz#8d93cb0c7dacb13143b20991385a7ee085b53eb4"
+  integrity sha512-ClnyG/vDU3ViYytBaamUKFzm/NZzUhv2rfT3Jnymn7fe3KGP1FOtfqA52XOjyiBjZAg2O35ZDhEHXoIPw4P4aw==
 
 "@arcblock/jwt@1.14.23", "@arcblock/jwt@^1.14.20":
   version "1.14.23"
@@ -162,10 +163,10 @@
     pako "^1.0.11"
     url-join "^4.0.1"
 
-"@arcblock/react-hooks@^1.16.41":
-  version "1.16.41"
-  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-1.16.41.tgz#1f90c92015b2f64ed55c70819cd17b391f48582d"
-  integrity sha512-ZNi9uwhUMcrerTuEyEDqGU5odYzJpUiZOzdBavSWQkgwjtVqld4LEk8PNKMO1LYlW7lI4XaV6n4qVlZ/d6sp/Q==
+"@arcblock/react-hooks@^1.17.2":
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-1.17.2.tgz#e80671f0617d06a44aa17e96c79f960ba8744a0a"
+  integrity sha512-X1ti1yMoVX4NnZe7OaLHKE/O4QoXsp8sMTUf8K9a+XwIeHXLqF/txiXkd9ZkbDfy22HrXaTo40F+pvja9I/l+g==
   dependencies:
     core-js "^3.6.4"
     event-target-shim "^5.0.1"
@@ -182,16 +183,18 @@
     lodash.get "^4.4.2"
     lodash.set "^4.3.2"
 
-"@arcblock/ux@^1.16.41":
-  version "1.16.41"
-  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-1.16.41.tgz#4fa1eece651ea8062c22f73772597609c6132792"
-  integrity sha512-hlxigXgztzWizGVJOVZenIRsXBEdttWVdvwYORBFB5fum2MiqYJZT/QuRlyBzueO8OXCYcwx1dgVyyQyKZNy0g==
+"@arcblock/ux@^1.17.2":
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-1.17.2.tgz#81a222d1cf530f01a73b37547c56f13d21173275"
+  integrity sha512-63Y3lMsBTtvkHYA7o2U7aL4VNGZ7XAhWkCC0S2ev1yOc55wns5gkUYQWrzY5NMZJLVyDNxm+1tE9+6KKvTsVeA==
   dependencies:
-    "@arcblock/icons" "^1.16.41"
-    "@arcblock/react-hooks" "^1.16.41"
+    "@arcblock/icons" "^1.17.2"
+    "@arcblock/react-hooks" "^1.17.2"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
+    "@fontsource/lato" "^4.5.3"
     "@material-ui/core" "^4.12.3"
     "@material-ui/icons" "4.11.2"
+    "@solana/qr-code-styling" "^1.6.0-beta.0"
     axios "^0.21.1"
     base64-url "^2.3.3"
     copy-to-clipboard "^3.2.0"
@@ -1526,6 +1529,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/lato@^4.5.3":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.5.tgz#d7371e29600528a44f5076a1604cf223168d1579"
+  integrity sha512-0KVmVCq3wZnriKVdbY+n/ZLf7Vy+dQcqpcm8kaVX4QGd6uBTgH6YWLnM1L051TtjKlal2FiE6xc/BLw116a0gQ==
+
 "@fontsource/rubik@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-4.5.0.tgz#e6e86606903d7102c565eec4b1339298308c3acb"
@@ -2084,6 +2092,13 @@
   integrity sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@solana/qr-code-styling@^1.6.0-beta.0":
+  version "1.6.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@solana/qr-code-styling/-/qr-code-styling-1.6.0-beta.0.tgz#656e793756ddfe0f6ee62e8d6a45217ebe88ced1"
+  integrity sha512-JYV016q+PeHdK6GGGFzqWSR7x35gFS6I1bYAQEQ60aApGE7+2OM3q4he3Nzg3Hdxl/frMnli6Z0bQ4Xm+i76Kg==
+  dependencies:
+    qrcode-generator "^1.4.3"
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"
@@ -3527,6 +3542,11 @@ bindings@^1.5.0:
   integrity sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
   dependencies:
     file-uri-to-path "1.0.0"
+
+blakejs@^1.1.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/blakejs/-/blakejs-1.2.1.tgz#5057e4206eadb4a97f7c0b6e197a505042fc3814"
+  integrity sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==
 
 bluebird@^3.5.5:
   version "3.7.2"
@@ -10501,7 +10521,7 @@ prompts@2.4.0, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -10597,19 +10617,10 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qr.js@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
-  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
-
-qrcode.react@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/qrcode.react/-/qrcode.react-1.0.1.tgz#2834bb50e5e275ffe5af6906eff15391fe9e38a5"
-  integrity sha512-8d3Tackk8IRLXTo67Y+c1rpaiXjoz/Dd2HpcMdW//62/x8J1Nbho14Kh8x974t9prsLHN6XqVgcnRiBGFptQmg==
-  dependencies:
-    loose-envify "^1.4.0"
-    prop-types "^15.6.0"
-    qr.js "0.0.0"
+qrcode-generator@^1.4.3:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
+  integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
 
 qs@6.7.0:
   version "6.7.0"
@@ -12747,12 +12758,20 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
+tweetnacl-sealedbox-js@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tweetnacl-sealedbox-js/-/tweetnacl-sealedbox-js-1.2.0.tgz#37f0d49a24445d6f55a1b9e8870568529bcb233f"
+  integrity sha512-QoCr8K2hwri+ky7SUa22oSre8g88XaWi0hwwWd16pJMuDyn5gL/UyE0PyR2EOFEMJ70T2trJ9+Sv+Qa18olEmQ==
+  dependencies:
+    blakejs "^1.1.0"
+    tweetnacl "^1.0.1"
+
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-tweetnacl@^1.0.3:
+tweetnacl@^1.0.1, tweetnacl@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
