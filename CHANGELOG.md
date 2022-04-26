@@ -1,3 +1,7 @@
+## 1.3.2 (April 26, 2022)
+
+- chore: use common header/footer
+
 ## 1.3.1 (四月 06, 2022)
 
 - chore: update deps
