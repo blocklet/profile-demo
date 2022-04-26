@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 
 import Avatar from '@material-ui/core/Avatar';
+import Box from '@material-ui/core/Box';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
-import Button from '@arcblock/ux/lib/Button';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
 import DidAddress from '@arcblock/did-connect/lib/Address';
+import Header from '@blocklet/ui/lib/Header';
+import Footer from '@blocklet/ui/lib/Footer';
 
 import { useSessionContext } from '../libs/session';
 
@@ -39,8 +41,6 @@ export default function Main() {
       .catch(() => {});
   };
 
-  const isLogin = !!session.user;
-
   const rows = !!user
     ? [
         { name: t('name'), value: user.fullName },
@@ -63,50 +63,44 @@ export default function Main() {
     : [];
 
   return (
-    <Container>
-      <Media className="header">
-        <div className="left">
-          <div style={{ fontSize: 20 }}>Profile Demo</div>
-        </div>
-        <div className="right">
-          {isLogin && (
-            <span style={{ top: 1, position: 'relative', marginRight: 6 }}>Hello, {session.user.fullName}</span>
+    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
+      <Header/>
+      <Box flex="1" my={4} overflow="auto">
+        <Container>
+          {!user && (
+            <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
+              You are not logged in yet
+            </div>
           )}
-          <Button onClick={() => (isLogin ? session.logout() : session.login())}>{isLogin ? 'Logout' : 'Login'}</Button>
-        </div>
-      </Media>
 
-      {!user && (
-        <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
-          You are not logged in yet
-        </div>
-      )}
+          {!!user && (
+            <div style={{ marginTop: 40 }}>
+              {rows.map((row) => {
+                if (row.name === t('common.did')) {
+                  return (
+                    <InfoRow
+                      valueComponent="div"
+                      key={row.name}
+                      nameWidth={120}
+                      name={row.name}
+                      nameFormatter={() => t('common.did')}>
+                      {row.value}
+                    </InfoRow>
+                  );
+                }
 
-      {!!user && (
-        <div style={{ marginTop: 40 }}>
-          {rows.map((row) => {
-            if (row.name === t('common.did')) {
-              return (
-                <InfoRow
-                  valueComponent="div"
-                  key={row.name}
-                  nameWidth={120}
-                  name={row.name}
-                  nameFormatter={() => t('common.did')}>
-                  {row.value}
-                </InfoRow>
-              );
-            }
-
-            return (
-              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
-                {row.value}
-              </InfoRow>
-            );
-          })}
-        </div>
-      )}
-    </Container>
+                return (
+                  <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                    {row.value}
+                  </InfoRow>
+                );
+              })}
+            </div>
+          )}
+        </Container>
+      </Box>
+      <Footer />
+    </Box>
   );
 }
 
