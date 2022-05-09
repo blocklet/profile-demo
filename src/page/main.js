@@ -9,8 +9,8 @@ import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
 import DidAddress from '@arcblock/did-connect/lib/Address';
-import Header from '@blocklet/ui/lib/Header';
-import Footer from '@blocklet/ui/lib/Footer';
+import Header from '@blocklet/ui-react/lib/Header';
+import Footer from '@blocklet/ui-react/lib/Footer';
 
 import { useSessionContext } from '../libs/session';
 
