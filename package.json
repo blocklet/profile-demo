@@ -13,7 +13,7 @@
     "bundle": "yarn clean && npm run bundle:client && npm run bundle:server",
     "bundle:client": "PUBLIC_URL=\".\" REACT_APP_API_PREFIX=\"\" REACT_APP_APP_NAME=\"Profile Demo\" yarn build:client",
     "build:client": "react-scripts build && rm -f build/**/**/*.{js,css}.map",
-    "bundle:server": "blocklet bundle --zip --create-release",
+    "bundle:server": "blocklet bundle --create-release",
     "test": "node tools/jest.js",
     "release": "npm run clean && npm run bundle",
     "coverage": "npm run test -- --coverage"

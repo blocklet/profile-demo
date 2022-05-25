@@ -63,7 +63,7 @@ if (isProduction) {
     server.use(`/${process.env.BLOCKLET_DID}`, router);
   }
 
-  const staticDir = path.resolve(__dirname, '../../', 'build');
+  const staticDir = path.resolve(__dirname, './', 'build');
   server.use(express.static(staticDir, { maxAge: '365d', index: false }));
   server.use(fallback('index.html', { root: staticDir }));
 
