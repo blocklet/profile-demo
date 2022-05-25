@@ -1,3 +1,8 @@
+## 1.3.5 (May 26, 2022)
+
+- chore: bump @blocklet/sdk to latest
+- chore: change bundle type from zip to default
+
 ## 1.3.4 (May 12, 2022)
 
 - chore(deps): bump chain and common deps to latest
