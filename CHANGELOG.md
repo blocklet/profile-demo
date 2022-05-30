@@ -1,3 +1,7 @@
+## 1.3.6 (May 30, 2022)
+
+- chore: upgrade to react 18 and mui v5
+
 ## 1.3.5 (May 26, 2022)
 
 - chore: bump @blocklet/sdk to latest

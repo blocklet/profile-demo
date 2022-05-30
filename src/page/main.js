@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 
-import Avatar from '@material-ui/core/Avatar';
-import Box from '@material-ui/core/Box';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
