@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { LocaleProvider } from '@arcblock/ux/lib/Locale/context';
 import { create } from '@arcblock/ux/lib/Theme';
 
@@ -38,14 +38,14 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ThemeProvider theme={theme}>
+      <StyledThemeProvider theme={theme}>
         <LocaleProvider translations={translations}>
           <SessionProvider serviceHost={prefix}>
             <CssBaseline />
             <Main />
           </SessionProvider>
         </LocaleProvider>
-      </ThemeProvider>
+      </StyledThemeProvider>
     </MuiThemeProvider>
   );
 }
