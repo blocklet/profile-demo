@@ -1,3 +1,7 @@
+## 1.3.7 (June 01, 2022)
+
+- [skip ci] Update README.md
+
 ## 1.3.6 (May 30, 2022)
 
 - chore: upgrade to react 18 and mui v5
