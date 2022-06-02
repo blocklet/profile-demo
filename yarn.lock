@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@abtnode/client@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@abtnode/client/-/client-1.7.19.tgz#ef40e9b56121dc330c23d9d1a6d89df49d46ac06"
-  integrity sha512-xzUnBDxbWdKjmOihVr4CByS66JiABDZ9WmUDXzZALM6mBNzYBx+7neB6ENfyvNVu+kyZ62YgFjjHPnY4VNXY9Q==
+"@abtnode/client@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@abtnode/client/-/client-1.7.20.tgz#05b6327ad8324f40826e8a5d04efa4ae25535ad3"
+  integrity sha512-6hYuESFXY3AVeaJyF7Y1JFDTN1fD3hn2ghqtOjWHyLvJDWiQLKJzWElOAyA13EZLLpC4LSiXngHhttVae0frkQ==
   dependencies:
     "@arcblock/sdk-util" "^0.30.0"
     "@ocap/util" "^1.16.15"
@@ -18,15 +18,15 @@
     lodash "^4.17.21"
     react-app-polyfill "^1.0.6"
 
-"@abtnode/constant@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@abtnode/constant/-/constant-1.7.19.tgz#05bf871948e01b1a84f0c68b495346078bfb425c"
-  integrity sha512-I5s/sT7GK8iY9/SLSMwbiXizfsP7jrYm0wfh2uVHu9CU2yaFQFdIstMgp4dlNrcKgVoIOiYj1mBF0N41apONSg==
+"@abtnode/constant@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@abtnode/constant/-/constant-1.7.20.tgz#5ec362f5abe728226d8575556502c825b8514e80"
+  integrity sha512-FxGi6AljoRmC3PWU03gzwb6Af4ee/1PgHgR2w/JKAlf3tGzV4BECB400BQk9s7vayCEJR+xxK5SaSb642Guebg==
 
-"@abtnode/logger@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@abtnode/logger/-/logger-1.7.19.tgz#032917b9efe3bfb62d07383e35e7140e7036a90e"
-  integrity sha512-/eOezOTUYB2d3/yJVJ+dLyoZ5a24l49l7oySwaqPaQ2Lq4sVrIIKZIL1qYGRYbdCrRbMnNxpcYlgh6Sjnvh3mg==
+"@abtnode/logger@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@abtnode/logger/-/logger-1.7.20.tgz#a37265fa0de2e9c59980af261b9585d6417f20d6"
+  integrity sha512-uxsLUF1IGSr3dpEUJqSZV+7agxutQjoe/SAAigj1ucFSkgNbL14t0KoSYeOXWau6yFoRprWFuKDE29nPttUZPQ==
   dependencies:
     debug "^4.3.3"
     fs-extra "^10.0.1"
@@ -36,10 +36,10 @@
     winston "^3.3.4"
     winston-daily-rotate-file "^4.5.5"
 
-"@abtnode/util@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@abtnode/util/-/util-1.7.19.tgz#ca173541c708a84c511d51cb4d256e9112b5d31c"
-  integrity sha512-b9Cp+GQet769Ge0ttVAAghi6Z+db7NsnADEDIYPUFUqoEKKaaG5oCq0uYLr0AwysI/1c7jpvRX2STc8EhhfeJg==
+"@abtnode/util@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@abtnode/util/-/util-1.7.20.tgz#100e772f5c664ff292609b9176e2a6ec1c3edf52"
+  integrity sha512-+EB/beJSQh3/3QPXXWEURTem15v1Sokl0EXCrglAwIoTTjP19FS6S64T9M8buotzekoI+WNDsDxrHsEHETtcGA==
   dependencies:
     "@ocap/mcrypto" "^1.16.15"
     "@ocap/util" "^1.16.15"
@@ -89,16 +89,16 @@
     semver "^7.3.4"
     tweetnacl-sealedbox-js "^1.2.0"
 
-"@arcblock/did-connect@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.1.7.tgz#9222695eb89679b63fe4063b6a2f5870f0ffd3ce"
-  integrity sha512-/mFMGBVm/tpoAD+DSti9UMe5LiWDHSLIqa7GTtFJMT7CkAahlc4Lauz8GB2MeDXPVTZGSTAa2SHVJjr93NH93g==
+"@arcblock/did-connect@^2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.1.14.tgz#fc03a8fec535f7333d5d68422832a625c94968d3"
+  integrity sha512-iE++M6RdxPXJDpJe/47P/1iAUtNRuJ3+PCQ18Fmb4gA/FO4xr/qR7Xk0Ys7jGyyP/lid66PKt5viawgbnMladQ==
   dependencies:
     "@arcblock/did-motif" "^1.1.8"
     "@arcblock/event-client" "^1.6.3"
-    "@arcblock/icons" "^2.1.7"
-    "@arcblock/react-hooks" "^2.1.7"
-    "@arcblock/ux" "^2.1.7"
+    "@arcblock/icons" "^2.1.14"
+    "@arcblock/react-hooks" "^2.1.14"
+    "@arcblock/ux" "^2.1.14"
     "@fontsource/lato" "^4.5.3"
     "@fontsource/ubuntu-mono" "^4.4.5"
     "@mui/icons-material" "^5.6.2"
@@ -180,10 +180,10 @@
     amp-message "~0.1.1"
     axon "^2.0.3"
 
-"@arcblock/icons@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.1.7.tgz#6e857d2b36882815269367d5af80677fee954eca"
-  integrity sha512-LXPFZIWOdE3OEGKtW/mOkKvd/+xdWxlIswXmdBi+t4Vy+KKyqcuZghBNbNmHLaNuiSW6cTCyQQi8aBuKyh+gzw==
+"@arcblock/icons@^2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.1.14.tgz#41b2963715d3516a3097c61f59054efe778c6a4b"
+  integrity sha512-la1MH06v6AQKdMSAZmgIdRi9R544Yhp9yaCZievhl6gihp59tNF9IW1GqrYxKE16dV+MbsatsEUO0UY4VYgmNA==
 
 "@arcblock/jwt@1.16.15", "@arcblock/jwt@^1.16.15":
   version "1.16.15"
@@ -213,10 +213,10 @@
     pako "^1.0.11"
     url-join "^4.0.1"
 
-"@arcblock/react-hooks@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.1.7.tgz#1acbfb9a6135adb35566375615e6d99f18d92ba8"
-  integrity sha512-n6AKjjrfto/w/1UL4OA+VOzXMdFVQzSpeCYYqBuCM3k/GyWcaaFTDZ3M83nMsOcfOMqhhJE72joKi7Uo8TyGrg==
+"@arcblock/react-hooks@^2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.1.14.tgz#7e42f8076e4e3820d18a141e6f3a285bcddb6487"
+  integrity sha512-BZ7WA5u1yayj0RQKMaTDTaej7pFRf9NlXObdJIhabAD7uIv48+FiAUGSt4SOKpe4tti1fMx1UgcSjPKQ1jM6+A==
   dependencies:
     core-js "^3.6.4"
     event-target-shim "^5.0.1"
@@ -233,13 +233,13 @@
     lodash.get "^4.4.2"
     lodash.set "^4.3.2"
 
-"@arcblock/ux@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.1.7.tgz#91ae9a1e45602e56fdd16710eb92f43dfd0e694a"
-  integrity sha512-CbqIFcJDf9J/5E3waDO2+1guZjGsgIaWvEwF8xCuff+QmpiXKkAHDnH54D1wHUb0qgqNXlWtEOBfH8bedtOm6w==
+"@arcblock/ux@^2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.1.14.tgz#a2a70787fb96d96c7535a887c5c8dd501d19b2c6"
+  integrity sha512-YRcMh61XrMyxU2mGijwAKYF2u47072vz9U7dnKemetaaDUrSRyrqOJPwXZypmRMDg4uuj/sP7a3QUKr8J2M5hg==
   dependencies:
-    "@arcblock/icons" "^2.1.7"
-    "@arcblock/react-hooks" "^2.1.7"
+    "@arcblock/icons" "^2.1.14"
+    "@arcblock/react-hooks" "^2.1.14"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
     "@emotion/react" "^11.9.0"
     "@emotion/styled" "^11.8.1"
@@ -262,6 +262,7 @@
     mui-datatables "^4.2.2"
     notistack "^2.0.5"
     react-cookie-consent "^6.4.1"
+    react-error-boundary "^3.1.4"
     react-helmet "^6.1.0"
     react-intersection-observer "^8.31.1"
     react-lottie-player "^1.4.2"
@@ -1519,13 +1520,13 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blocklet/meta@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@blocklet/meta/-/meta-1.7.19.tgz#59f755c723990dabafe51201bf0889a946ffdd32"
-  integrity sha512-6xFR+k1p40C2Cjn7RcQ4HnO4rACm/zySU7kZUaUbXTjSXEGExWi4ayhWtyJE4WQugXOg+1hEMuf1nhxH8pIPIQ==
+"@blocklet/meta@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@blocklet/meta/-/meta-1.7.20.tgz#694ecc68215f828186e78d265843afdf642f56e9"
+  integrity sha512-TlyfDDIMnI9W6bAqvh3VwHlRUHyipntpktNOJd99ba8PuHYp1zR7Ph/Utk81+c+v8TAK6jb0OdHt+NyzSt1iIg==
   dependencies:
-    "@abtnode/constant" "1.7.19"
-    "@abtnode/util" "1.7.19"
+    "@abtnode/constant" "1.7.20"
+    "@abtnode/util" "1.7.20"
     "@arcblock/did" "^1.16.15"
     "@arcblock/did-ext" "^1.16.15"
     "@arcblock/did-util" "^1.16.15"
@@ -1550,18 +1551,18 @@
     url-join "^4.0.1"
     validate-npm-package-name "^3.0.0"
 
-"@blocklet/sdk@1.7.19":
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/@blocklet/sdk/-/sdk-1.7.19.tgz#bea7a51c22809204088bc49aa2a8d1334ac9bf9b"
-  integrity sha512-6HeBPtUR81K1QHWO+XJhzZijIybxWif5NTSVvi0/5o5Cp7jz8nWja7vmpF/jL/hMTP5QQ1qexsP634R08aqayg==
+"@blocklet/sdk@1.7.20":
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/@blocklet/sdk/-/sdk-1.7.20.tgz#00ef7fb2dd1ea783e6e991cc0b64451da3ff6c3c"
+  integrity sha512-j1u/bk0F+JxVH1SrOPK25s6nwzhGXNJryHumBpzpNWlivphsFEb3i/YeFHjYGII6rHnNSkP/J+eaJV+ePVCSGw==
   dependencies:
-    "@abtnode/client" "1.7.19"
-    "@abtnode/constant" "1.7.19"
-    "@abtnode/logger" "1.7.19"
+    "@abtnode/client" "1.7.20"
+    "@abtnode/constant" "1.7.20"
+    "@abtnode/logger" "1.7.20"
     "@arcblock/did-auth" "^1.16.15"
     "@arcblock/jwt" "^1.16.15"
     "@arcblock/ws" "^1.16.15"
-    "@blocklet/meta" "1.7.19"
+    "@blocklet/meta" "1.7.20"
     "@nedb/core" "^1.2.2"
     "@ocap/mcrypto" "^1.16.15"
     "@ocap/wallet" "^1.16.15"
@@ -1572,16 +1573,17 @@
     lru-cache "^6.0.0"
     url-join "^4.0.1"
 
-"@blocklet/ui-react@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.1.7.tgz#f1e84aab1660542de922ce1249c36cc3bf8cbd1d"
-  integrity sha512-st9jAvyHzH3l4LdOrr3ADfArbbyXdN8Hr6+lmn40odJNCalg4SB/znHlvr8GefbhTxWoYznzZec8is1aRvnwwA==
+"@blocklet/ui-react@^2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.1.14.tgz#0d980254731d11e874c03f8e03bee5e375afefa4"
+  integrity sha512-Uphi0zQ9Omj0IuqTVm9b8SAo4deWi3UOWiR5zpiFl5HOovX1CqozWsPa6jkXiIyzBC+FIWeoatZQuRbRTJvkBA==
   dependencies:
-    "@arcblock/did-connect" "^2.1.7"
-    "@arcblock/ux" "^2.1.7"
+    "@arcblock/did-connect" "^2.1.14"
+    "@arcblock/ux" "^2.1.14"
     "@iconify/iconify" "^2.2.1"
     "@mui/material" "^5.6.4"
     core-js "^3.6.4"
+    react-error-boundary "^3.1.4"
     styled-components "^5.0.0"
 
 "@cnakazawa/watch@^1.0.3":
@@ -11796,6 +11798,13 @@ react-dom@^18.1.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.22.0"
+
+react-error-boundary@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-3.1.4.tgz#255db92b23197108757a888b01e5b729919abde0"
+  integrity sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 react-error-overlay@^6.0.9:
   version "6.0.9"

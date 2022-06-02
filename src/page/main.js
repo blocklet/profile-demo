@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
@@ -67,36 +68,38 @@ export default function Main() {
       <Header/>
       <Box flex="1" my={4} overflow="auto">
         <Container>
-          {!user && (
-            <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
-              You are not logged in yet
-            </div>
-          )}
+          <MainContainer>
+            {!user && (
+              <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
+                You are not logged in yet
+              </div>
+            )}
 
-          {!!user && (
-            <div style={{ marginTop: 40 }}>
-              {rows.map((row) => {
-                if (row.name === t('common.did')) {
+            {!!user && (
+              <div style={{ marginTop: 40 }}>
+                {rows.map((row) => {
+                  if (row.name === t('common.did')) {
+                    return (
+                      <InfoRow
+                        valueComponent="div"
+                        key={row.name}
+                        nameWidth={120}
+                        name={row.name}
+                        nameFormatter={() => t('common.did')}>
+                        {row.value}
+                      </InfoRow>
+                    );
+                  }
+
                   return (
-                    <InfoRow
-                      valueComponent="div"
-                      key={row.name}
-                      nameWidth={120}
-                      name={row.name}
-                      nameFormatter={() => t('common.did')}>
+                    <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
                       {row.value}
                     </InfoRow>
                   );
-                }
-
-                return (
-                  <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
-                    {row.value}
-                  </InfoRow>
-                );
-              })}
-            </div>
-          )}
+                })}
+              </div>
+            )}
+          </MainContainer>
         </Container>
       </Box>
       <Footer />
@@ -104,10 +107,9 @@ export default function Main() {
   );
 }
 
-const Container = styled.div`
+const MainContainer = styled.div`
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 10px;
   .header {
     padding: 20px 0;
     display: flex;
