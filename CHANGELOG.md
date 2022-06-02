@@ -1,3 +1,7 @@
+## 1.3.8 (June 02, 2022)
+
+- chore: update blocklet-ui and adjust layout
+
 ## 1.3.7 (June 01, 2022)
 
 - [skip ci] Update README.md
