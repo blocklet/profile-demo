@@ -8,6 +8,7 @@ title: Profile Demo
 description: Blocklet that show profile of login user, can be combined by other blocklets.
 group: dapp
 specVersion: 1.2.7
+logo: logo.png
 files:
   - blocklet.md
   - README.md
