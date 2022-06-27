@@ -1,3 +1,7 @@
+## 1.3.11 (June 27, 2022)
+
+- chore: update arcblock deps
+
 ## 1.3.10 (June 27, 2022)
 
 - fix: resize the logo
