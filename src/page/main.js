@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { styled } from '@arcblock/ux/lib/Theme';
 import dayjs from 'dayjs';
 
 import Avatar from '@mui/material/Avatar';
@@ -107,28 +107,12 @@ export default function Main() {
   );
 }
 
-const MainContainer = styled.div`
+const MainContainer = styled('div')`
   max-width: 600px;
   margin: 0 auto;
   .header {
     padding: 20px 0;
     display: flex;
     align-items: center;
-  }
-`;
-
-const Media = styled.div`
-  display: flex;
-  justify-content: space-between;
-  .left {
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
-  .body {
-    flex-grow: 1;
-  }
-  .right {
-    flex-shrink: 0;
-    margin-left: 10px;
   }
 `;
