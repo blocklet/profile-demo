@@ -1,3 +1,7 @@
+## 1.3.12 (October 21, 2022)
+
+- chore: update deps & remove styled-components (#31)
+
 ## 1.3.11 (June 27, 2022)
 
 - chore: update arcblock deps
