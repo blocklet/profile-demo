@@ -27,6 +27,7 @@ export default function Main() {
   const { session, api } = useSessionContext();
   const [user, setUser] = useState();
   const { t } = useLocaleContext();
+  const { preferences } = window.blocklet;
 
   useEffect(() => {
     getData();
@@ -45,7 +46,7 @@ export default function Main() {
   const rows = !!user
     ? [
         { name: t('name'), value: user.fullName },
-        { name: t('avatar'), value: <Avatar alt="" src={user.avatar}></Avatar> },
+        preferences.displayAvatar ? { name: t('avatar'), value: <Avatar alt="" src={user.avatar}></Avatar> } : null,
         { name: t('did'), value: <DidAddress>{user.did}</DidAddress> },
         { name: t('email'), value: user.email },
         {
@@ -71,7 +72,7 @@ export default function Main() {
           <MainContainer>
             {!user && (
               <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
-                You are not logged in yet
+                You are not logged in yet! {preferences.welcome}
               </div>
             )}
 
