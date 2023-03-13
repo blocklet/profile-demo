@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fallback = require('express-history-api-fallback');
 
-const isProduction = process.env.NODE_ENV !== 'development'
+const isProduction = process.env.NODE_ENV !== 'development';
 
 // Create and config express application
 const server = express();
@@ -36,7 +36,7 @@ server.use(
     }
 
     return log;
-  })
+  }),
 );
 
 // 通过全局的中间件来组装当前登录的用户信息
@@ -63,7 +63,7 @@ if (isProduction) {
     server.use(`/${process.env.BLOCKLET_DID}`, router);
   }
 
-  const staticDir = path.resolve(__dirname, './', 'build');
+  const staticDir = path.resolve(__dirname, './', 'dist');
   server.use(express.static(staticDir, { maxAge: '365d', index: false }));
   server.use(fallback('index.html', { root: staticDir }));
 

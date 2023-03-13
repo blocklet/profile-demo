@@ -12,7 +12,7 @@ logo: logo.png
 files:
   - blocklet.md
   - README.md
-  - build
+  - dist
 keywords:
   - dapp
   - demo
