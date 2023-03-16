@@ -1,3 +1,9 @@
+## 1.4.0 (March 16, 2023)
+
+- chore: bump deps to latest
+- feat: support blocklet preferences
+- [skip ci] Update README.md
+
 ## 1.3.12 (October 21, 2022)
 
 - chore: update deps & remove styled-components (#31)
