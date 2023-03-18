@@ -18,27 +18,6 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
 
-server.use(
-  morgan((tokens, req, res) => {
-    const log = [
-      tokens.method(req, res),
-      tokens.url(req, res),
-      tokens.status(req, res),
-      tokens.res(req, res, 'content-length'),
-      '-',
-      tokens['response-time'](req, res),
-      'ms',
-    ].join(' ');
-
-    if (isProduction) {
-      // Log only in AWS context to get back function logs
-      console.log(log);
-    }
-
-    return log;
-  }),
-);
-
 // 通过全局的中间件来组装当前登录的用户信息
 server.use((req, res, next) => {
   if (req.headers['x-user-did']) {
@@ -56,6 +35,26 @@ const router = express.Router();
 require('../routes/user').init(router);
 
 if (isProduction) {
+  server.use(
+    morgan((tokens, req, res) => {
+      const log = [
+        tokens.method(req, res),
+        tokens.url(req, res),
+        tokens.status(req, res),
+        tokens.res(req, res, 'content-length'),
+        '-',
+        tokens['response-time'](req, res),
+        'ms',
+      ].join(' ');
+
+      if (isProduction) {
+        // Log only in AWS context to get back function logs
+        console.log(log);
+      }
+
+      return log;
+    }),
+  );
   server.use(compression());
   server.use(router);
 
