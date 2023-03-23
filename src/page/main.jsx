@@ -37,7 +37,6 @@ export default function Main() {
     api
       .get('/api/user')
       .then((res) => {
-        console.log(res.data.user);
         setUser(res.data.user);
       })
       .catch(() => {
@@ -55,7 +54,9 @@ export default function Main() {
           name: t('passports'),
           value: user.passports
             ? user.passports.map((passport) => (
-                <Tag type={passport.name === 'owner' ? 'success' : 'default'}>{passport.title}</Tag>
+                <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'default'}>
+                  {passport.title}
+                </Tag>
               ))
             : '--',
         },
