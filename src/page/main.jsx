@@ -40,7 +40,9 @@ export default function Main() {
         console.log(res.data.user);
         setUser(res.data.user);
       })
-      .catch(() => {});
+      .catch(() => {
+        window.location.reload();
+      });
   };
 
   const rows = !!user
@@ -51,8 +53,10 @@ export default function Main() {
         { name: t('email'), value: user.email },
         {
           name: t('passports'),
-          value: user.passports ?
-            user.passports.map(passport => <Tag type={passport.name === 'owner' ? 'success' : 'default'}>{passport.title}</Tag>)
+          value: user.passports
+            ? user.passports.map((passport) => (
+                <Tag type={passport.name === 'owner' ? 'success' : 'default'}>{passport.title}</Tag>
+              ))
             : '--',
         },
         {
@@ -66,7 +70,7 @@ export default function Main() {
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header/>
+      <Header />
       <Box flex="1" my={4} overflow="auto">
         <Container>
           <MainContainer>
