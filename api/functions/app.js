@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fallback = require('express-history-api-fallback');
 
-const isProduction = process.env.NODE_ENV !== 'development'
+const isProduction = process.env.NODE_ENV !== 'development';
 
 // Create and config express application
 const server = express();
@@ -17,27 +17,6 @@ server.use(cookieParser());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
-
-server.use(
-  morgan((tokens, req, res) => {
-    const log = [
-      tokens.method(req, res),
-      tokens.url(req, res),
-      tokens.status(req, res),
-      tokens.res(req, res, 'content-length'),
-      '-',
-      tokens['response-time'](req, res),
-      'ms',
-    ].join(' ');
-
-    if (isProduction) {
-      // Log only in AWS context to get back function logs
-      console.log(log);
-    }
-
-    return log;
-  })
-);
 
 // 通过全局的中间件来组装当前登录的用户信息
 server.use((req, res, next) => {
@@ -56,6 +35,26 @@ const router = express.Router();
 require('../routes/user').init(router);
 
 if (isProduction) {
+  server.use(
+    morgan((tokens, req, res) => {
+      const log = [
+        tokens.method(req, res),
+        tokens.url(req, res),
+        tokens.status(req, res),
+        tokens.res(req, res, 'content-length'),
+        '-',
+        tokens['response-time'](req, res),
+        'ms',
+      ].join(' ');
+
+      if (isProduction) {
+        // Log only in AWS context to get back function logs
+        console.log(log);
+      }
+
+      return log;
+    }),
+  );
   server.use(compression());
   server.use(router);
 
@@ -63,7 +62,7 @@ if (isProduction) {
     server.use(`/${process.env.BLOCKLET_DID}`, router);
   }
 
-  const staticDir = path.resolve(__dirname, './', 'build');
+  const staticDir = path.resolve(__dirname, './', 'dist');
   server.use(express.static(staticDir, { maxAge: '365d', index: false }));
   server.use(fallback('index.html', { root: staticDir }));
 

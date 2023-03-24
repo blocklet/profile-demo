@@ -2,6 +2,7 @@ node_modules
 .blocklet
 .abtnode
 blocklet.js
+blocklet.js.LICENSE.txt
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -14,6 +15,7 @@ blocklet.js
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -28,3 +30,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 blocklet.js.LICENSE.txt
+
+.yalc
+yalc.lock

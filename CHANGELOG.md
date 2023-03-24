@@ -1,3 +1,10 @@
+## 1.4.1 (March 24, 2023)
+
+- chore: update deps
+- chore: reload after login
+- chore: disable morgan log in development
+- feat: move react-script -> vite
+
 ## 1.4.0 (March 16, 2023)
 
 - chore: bump deps to latest

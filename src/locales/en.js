@@ -1,6 +1,6 @@
-const flat = require('flat');
+import flat from 'flat';
 
-module.exports = flat({
+export default flat({
   name: 'Name',
   avatar: 'Avatar',
   did: 'DID',
