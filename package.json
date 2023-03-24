@@ -10,7 +10,7 @@
     "start": "NODE_ENV=development nodemon api/dev.js -w api",
     "bundle": "npm run clean && npm run bundle:client && npm run bundle:server",
     "bundle:client": "vite build",
-    "bundle:server": "bn bundle --create-release",
+    "bundle:server": "blocklet bundle --create-release",
     "update:deps": "npx taze -w",
     "dedupe": "npx yarn-deduplicate yarn.lock && yarn",
     "coverage": "npm run test -- --coverage"
