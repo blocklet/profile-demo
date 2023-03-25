@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@arcblock/ux/lib/Theme';
-import { LocaleProvider } from '@arcblock/ux/lib/Locale/context';
+import { LocaleProvider, useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import { SessionProvider } from './libs/session';
 import { translations } from './locales';
 import Main from './page/main';
@@ -14,11 +14,18 @@ function App() {
   return (
     <ThemeProvider>
       <LocaleProvider translations={translations}>
-        <SessionProvider serviceHost={prefix}>
-          <Main />
-        </SessionProvider>
+        <AppInside />
       </LocaleProvider>
     </ThemeProvider>
+  );
+}
+
+function AppInside() {
+  const { locale } = useLocaleContext();
+  return (
+    <SessionProvider serviceHost={prefix} locale={locale}>
+      <Main />
+    </SessionProvider>
   );
 }
 

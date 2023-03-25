@@ -54,7 +54,7 @@ export default function Main() {
           name: t('passports'),
           value: user.passports
             ? user.passports.map((passport) => (
-                <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'default'}>
+                <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'primary'}>
                   {passport.title}
                 </Tag>
               ))
@@ -62,7 +62,7 @@ export default function Main() {
         },
         {
           name: t('role'),
-          value: <Tag type={user.role === 'owner' ? 'success' : 'default'}>{user.role}</Tag>,
+          value: <Tag type={user.role === 'owner' ? 'success' : 'primary'}>{user.role}</Tag>,
         },
         { name: t('lastLogin'), value: formatToDatetime(user.updatedAt) },
         { name: t('createdAt'), value: formatToDatetime(user.createdAt) },
