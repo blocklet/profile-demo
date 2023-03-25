@@ -1,3 +1,7 @@
+## 1.4.2 (March 25, 2023)
+
+- chore: update deps
+
 ## 1.4.1 (March 24, 2023)
 
 - chore: update deps
