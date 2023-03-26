@@ -16,10 +16,10 @@
     "coverage": "npm run test -- --coverage"
   },
   "dependencies": {
-    "@arcblock/did-connect": "^2.5.15",
-    "@arcblock/ux": "^2.5.15",
-    "@blocklet/sdk": "1.16.0-beta-99e016c7",
-    "@blocklet/ui-react": "^2.5.15",
+    "@arcblock/did-connect": "^2.5.16",
+    "@arcblock/ux": "^2.5.16",
+    "@blocklet/sdk": "1.16.0-beta-ad6df3ae",
+    "@blocklet/ui-react": "^2.5.16",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
