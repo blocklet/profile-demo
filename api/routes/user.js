@@ -14,7 +14,7 @@ module.exports = {
         return;
       }
       const { user } = await authClient.getUser(req.user.did);
-      user.role = req.user.role;
+      user.role = user.role || req.user.role;
       res.json({ user });
     });
   },
