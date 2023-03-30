@@ -13,9 +13,14 @@ module.exports = {
         res.json({ user: null });
         return;
       }
-      const { user } = await authClient.getUser(req.user.did);
-      user.role = user.role || req.user.role;
-      res.json({ user });
+      try {
+        const { user } = await authClient.getUser(req.user.did);
+        user.role = user.role || req.user.role;
+        res.json({ user });
+      } catch (err) {
+        console.error(err);
+        res.json({ user: null });
+      }
     });
   },
 };
