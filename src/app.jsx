@@ -14,18 +14,11 @@ function App() {
   return (
     <ThemeProvider>
       <LocaleProvider translations={translations}>
-        <AppInside />
+        <SessionProvider serviceHost={prefix}>
+          <Main />
+        </SessionProvider>
       </LocaleProvider>
     </ThemeProvider>
-  );
-}
-
-function AppInside() {
-  const { locale } = useLocaleContext();
-  return (
-    <SessionProvider serviceHost={prefix} locale={locale}>
-      <Main />
-    </SessionProvider>
   );
 }
 

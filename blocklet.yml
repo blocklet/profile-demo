@@ -35,7 +35,19 @@ requirements:
   server: '>=1.16.0'
   os: '*'
   cpu: '*'
-environments: []
+environments:
+  - name: CHAIN_HOST
+    description: What's endpoint of the chain?
+    required: false
+    default: https://beta.abtnetwork.io/api/
+    secure: false
+    shared: true
+  - name: CHAIN_ID
+    description: What's chain id of the chain?
+    required: false
+    default: beta
+    secure: false
+    shared: true
 scripts:
   dev: npm run start
 screenshots: []
