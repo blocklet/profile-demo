@@ -18,18 +18,6 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
 
-// 通过全局的中间件来组装当前登录的用户信息
-server.use((req, res, next) => {
-  if (req.headers['x-user-did']) {
-    req.user = {
-      did: req.headers['x-user-did'],
-      role: req.headers['x-user-role'],
-      fullName: decodeURIComponent(req.headers['x-user-fullname']),
-    };
-  }
-  next();
-});
-
 const router = express.Router();
 
 require('../routes/user').init(router);
