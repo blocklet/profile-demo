@@ -58,5 +58,4 @@ capabilities:
   clusterMode: false
   component: true
   navigation: true
-  serverless: true
 components: []
