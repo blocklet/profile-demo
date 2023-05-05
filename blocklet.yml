@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.6.1
+version: 1.6.2
 main: api/index.js
 author:
   name: ArcBlock
@@ -58,4 +58,5 @@ capabilities:
   clusterMode: false
   component: true
   navigation: true
+  serverless: true
 components: []
