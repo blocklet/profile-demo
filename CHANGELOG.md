@@ -1,3 +1,8 @@
+## 1.7.0 (May 24, 2023)
+
+- chore: bump deps to latest
+- [skip ci] Update README.md
+
 ## 1.6.2 (May 05, 2023)
 
 - chore: update deps
