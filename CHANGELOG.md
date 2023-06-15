@@ -1,3 +1,7 @@
+## 1.9.1 (June 15, 2023)
+
+- chore: update deps
+
 ## 1.9.0 (June 13, 2023)
 
 - chore: bump deps to latest
