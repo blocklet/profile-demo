@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -20,10 +20,10 @@
   "dependencies": {
     "@arcblock/did": "^1.18.87",
     "@arcblock/did-auth-storage-nedb": "^1.7.1",
-    "@arcblock/did-connect": "^2.5.60",
-    "@arcblock/ux": "^2.5.60",
+    "@arcblock/did-connect": "^2.5.63",
+    "@arcblock/ux": "^2.5.63",
     "@blocklet/sdk": "^1.16.13",
-    "@blocklet/ui-react": "^2.5.60",
+    "@blocklet/ui-react": "^2.5.63",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
