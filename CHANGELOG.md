@@ -1,3 +1,7 @@
+## 1.9.6 (July 20, 2023)
+
+- chore: adapt to latest server
+
 ## 1.9.5 (July 17, 2023)
 
 - chore: update deps
