@@ -22,7 +22,7 @@
     "@arcblock/did-auth-storage-nedb": "^1.7.1",
     "@arcblock/did-connect": "^2.6.2",
     "@arcblock/ux": "^2.6.2",
-    "@blocklet/sdk": "^1.16.13",
+    "@blocklet/sdk": "^1.16.14-beta-3127f514",
     "@blocklet/ui-react": "^2.6.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
