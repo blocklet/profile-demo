@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -16,7 +16,8 @@
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "update:deps": "npx taze -w && yarn",
     "dedupe": "npx yarn-deduplicate yarn.lock && yarn",
-    "coverage": "npm run test -- --coverage"
+    "coverage": "npm run test -- --coverage",
+    "bump-version": "make bump-version"
   },
   "dependencies": {
     "@arcblock/did": "^1.18.90",

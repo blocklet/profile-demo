@@ -1,3 +1,8 @@
+## 1.9.10 (September 21, 2023)
+
+- chore: update deps
+- [skip ci] Update README.md
+
 ## 1.9.9 (September 12, 2023)
 
 
