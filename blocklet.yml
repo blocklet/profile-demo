@@ -1,8 +1,10 @@
 name: profile-demo
-version: 1.9.10
+version: 1.9.11
 main: api/index.js
 author:
   name: ArcBlock
+  email: blocklet@arcblock.io
+  url: https://github.com/blocklet
 license: ''
 title: Profile Demo
 description: Blocklet that show profile of login user, can be combined by other blocklets.
@@ -26,8 +28,8 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZqG23gxzv6CbTmtWFAipHGLjPEha4BjAtE
-community: ''
-documentation: ''
+community: https://community.arcblock.io
+documentation: https://developer.blocklet.io
 homepage: ''
 timeout:
   start: 60
