@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { styled } from '@arcblock/ux/lib/Theme';
 import dayjs from 'dayjs';
 
-import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import { Avatar, Button, Box, Container } from '@mui/material';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
@@ -14,6 +12,7 @@ import Header from '@blocklet/ui-react/lib/Header';
 import Footer from '@blocklet/ui-react/lib/Footer';
 
 import { useSessionContext } from '../libs/session';
+import { AUTH_SERVICE_PREFIX } from '@arcblock/did-connect/lib/constant';
 
 const formatToDatetime = (date) => {
   if (!date) {
@@ -42,6 +41,27 @@ export default function Main() {
       .catch(() => {
         window.location.reload();
       });
+  };
+
+  const autoLoginWallet = () => {
+    import('dsbridge').then((jsBridge) => {
+      const target = `${window.location.origin}${AUTH_SERVICE_PREFIX}/api/user/loginByWallet`;
+      console.info('try to login with wallet', {
+        target,
+        appPid: window.blocklet.appPid,
+      });
+
+      jsBridge.call(
+        'login',
+        {
+          target,
+          appPid: window.blocklet.appPid,
+        },
+        (data) => {
+          console.log('login result', data);
+        },
+      );
+    });
   };
 
   const rows = !!user
@@ -74,6 +94,9 @@ export default function Main() {
       <Header />
       <Box flex="1" my={4} overflow="auto">
         <Container>
+          <Button variant="outlined" onClick={autoLoginWallet}>
+            手动测试钱包自动登录
+          </Button>
           <MainContainer>
             {!user && (
               <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
