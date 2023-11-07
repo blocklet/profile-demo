@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { styled } from "@arcblock/ux/lib/Theme";
-import dayjs from "dayjs";
-import jsBridge from "dsbridge";
+import React, { useState, useEffect } from 'react';
+import { styled } from '@arcblock/ux/lib/Theme';
+import dayjs from 'dayjs';
+import jsBridge from 'dsbridge';
 
-import { Avatar, Button, Box, Container } from "@mui/material";
+import { Avatar, Button, Box, Container } from '@mui/material';
 
-import InfoRow from "@arcblock/ux/lib/InfoRow";
-import { useLocaleContext } from "@arcblock/ux/lib/Locale/context";
-import Tag from "@arcblock/ux/lib/Tag";
-import DidAddress from "@arcblock/did-connect/lib/Address";
-import Header from "@blocklet/ui-react/lib/Header";
-import Footer from "@blocklet/ui-react/lib/Footer";
+import InfoRow from '@arcblock/ux/lib/InfoRow';
+import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
+import Tag from '@arcblock/ux/lib/Tag';
+import DidAddress from '@arcblock/did-connect/lib/Address';
+import Header from '@blocklet/ui-react/lib/Header';
+import Footer from '@blocklet/ui-react/lib/Footer';
 
-import { useSessionContext } from "../libs/session";
-import { AUTH_SERVICE_PREFIX } from "@arcblock/did-connect/lib/constant";
+import { useSessionContext } from '../libs/session';
+import { AUTH_SERVICE_PREFIX } from '@arcblock/did-connect/lib/constant';
 
 const formatToDatetime = (date) => {
   if (!date) {
-    return "-";
+    return '-';
   }
 
-  return dayjs(date).format("YYYY-MM-DD hh:mm:ss");
+  return dayjs(date).format('YYYY-MM-DD hh:mm:ss');
 };
 
 export default function Main() {
-  const { session, api } = useSessionContext();
+  const { session, api, connectApi } = useSessionContext();
   const [user, setUser] = useState();
   const { t } = useLocaleContext();
   const { preferences } = window.blocklet;
@@ -35,7 +35,7 @@ export default function Main() {
 
   const getData = () => {
     api
-      .get("/api/user")
+      .get('/api/user')
       .then((res) => {
         setUser(res.data.user);
       })
@@ -45,54 +45,59 @@ export default function Main() {
   };
 
   const autoLoginWallet = () => {
-    const target = `${window.location.origin}${AUTH_SERVICE_PREFIX}/api/user/loginByWallet`;
-    console.info("try to login with wallet", {
+    // const target = `${window.location.origin}/api/user`;
+    const target = 'https://bbqaxcsimql5qp2ifuds5rdbozoamxre6hamewd6ewi.did.abtnet.io/api/user';
+    console.info('try to login with wallet', {
       target,
       appPid: window.blocklet.appPid,
     });
 
     jsBridge.call(
-      "arcLogin",
+      'arcLogin',
       {
         target,
         appPid: window.blocklet.appPid,
       },
       (data) => {
-        console.log("login result", data);
+        console.log('login result', data);
       },
     );
   };
 
   const getVisitorId = () => {
-    jsBridge.call("arcGetVisitorId", (data) => {
-      console.log("getVisitorId result", data);
+    jsBridge.call('arcGetVisitorId', (data) => {
+      console.log('getVisitorId result', data);
+    });
+  };
+
+  const testFn = () => {
+    connectApi.open({
+      action: 'login',
     });
   };
 
   const rows = !!user
     ? [
-        { name: t("name"), value: user.fullName },
-        preferences.displayAvatar
-          ? { name: t("avatar"), value: <Avatar alt="" src={user.avatar}></Avatar> }
-          : null,
-        { name: t("did"), value: <DidAddress>{user.did}</DidAddress> },
-        { name: t("email"), value: user.email },
+        { name: t('name'), value: user.fullName },
+        preferences.displayAvatar ? { name: t('avatar'), value: <Avatar alt="" src={user.avatar}></Avatar> } : null,
+        { name: t('did'), value: <DidAddress>{user.did}</DidAddress> },
+        { name: t('email'), value: user.email },
         {
-          name: t("passports"),
+          name: t('passports'),
           value: user.passports
             ? user.passports.map((passport) => (
-                <Tag key={passport.name} type={passport.name === "owner" ? "success" : "primary"}>
+                <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'primary'}>
                   {passport.title}
                 </Tag>
               ))
-            : "--",
+            : '--',
         },
         {
-          name: t("role"),
-          value: <Tag type={user.role === "owner" ? "success" : "primary"}>{user.role}</Tag>,
+          name: t('role'),
+          value: <Tag type={user.role === 'owner' ? 'success' : 'primary'}>{user.role}</Tag>,
         },
-        { name: t("lastLogin"), value: formatToDatetime(user.updatedAt) },
-        { name: t("createdAt"), value: formatToDatetime(user.createdAt) },
+        { name: t('lastLogin'), value: formatToDatetime(user.updatedAt) },
+        { name: t('createdAt'), value: formatToDatetime(user.createdAt) },
       ].filter(Boolean)
     : [];
 
@@ -107,9 +112,12 @@ export default function Main() {
           <Button variant="outlined" color="success" onClick={getVisitorId}>
             获取钱包的 visitorId
           </Button>
+          <Button variant="outlined" color="error" onClick={testFn}>
+            测试
+          </Button>
           <MainContainer>
             {!user && (
-              <div style={{ textAlign: "center", marginTop: "10vh", fontSize: 18, color: "#888" }}>
+              <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
                 You are not logged in yet! {preferences.welcome}
               </div>
             )}
@@ -117,14 +125,14 @@ export default function Main() {
             {!!user && (
               <div style={{ marginTop: 40 }}>
                 {rows.map((row) => {
-                  if (row.name === t("common.did")) {
+                  if (row.name === t('common.did')) {
                     return (
                       <InfoRow
                         valueComponent="div"
                         key={row.name}
                         nameWidth={120}
                         name={row.name}
-                        nameFormatter={() => t("common.did")}>
+                        nameFormatter={() => t('common.did')}>
                         {row.value}
                       </InfoRow>
                     );
@@ -146,7 +154,7 @@ export default function Main() {
   );
 }
 
-const MainContainer = styled("div")`
+const MainContainer = styled('div')`
   max-width: 600px;
   margin: 0 auto;
   .header {
