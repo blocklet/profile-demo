@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@arcblock/ux/lib/Theme';
 import dayjs from 'dayjs';
+import jsBridge from 'dsbridge';
 
 import { Avatar, Button, Box, Container } from '@mui/material';
 
@@ -44,23 +45,27 @@ export default function Main() {
   };
 
   const autoLoginWallet = () => {
-    import('dsbridge').then((jsBridge) => {
-      const target = `${window.location.origin}${AUTH_SERVICE_PREFIX}/api/user/loginByWallet`;
-      console.info('try to login with wallet', {
+    const target = `${window.location.origin}${AUTH_SERVICE_PREFIX}/api/user/loginByWallet`;
+    console.info('try to login with wallet', {
+      target,
+      appPid: window.blocklet.appPid,
+    });
+
+    jsBridge.call(
+      'arcLogin',
+      {
         target,
         appPid: window.blocklet.appPid,
-      });
+      },
+      (data) => {
+        console.log('login result', data);
+      },
+    );
+  };
 
-      jsBridge.call(
-        'login',
-        {
-          target,
-          appPid: window.blocklet.appPid,
-        },
-        (data) => {
-          console.log('login result', data);
-        },
-      );
+  const getVisitorId = () => {
+    jsBridge.call('arcGetVistorId', (data) => {
+      console.log('getVistorId result', data);
     });
   };
 
@@ -96,6 +101,9 @@ export default function Main() {
         <Container>
           <Button variant="outlined" onClick={autoLoginWallet}>
             手动测试钱包自动登录
+          </Button>
+          <Button variant="outlined" color="success" onClick={getVisitorId}>
+            获取钱包的 visitorId
           </Button>
           <MainContainer>
             {!user && (
