@@ -148,7 +148,8 @@ export default function Main() {
   };
 
   const autoLoginWallet = () => {
-    const target = `${window.location.origin}/api/user`;
+    const target = `${window.location.origin}${AUTH_SERVICE_PREFIX}/api/user/loginByWallet`;
+    // const target = `${window.location.origin}/api/user`;
     // const target = 'https://bbqaxcsimql5qp2ifuds5rdbozoamxre6hamewd6ewi.did.abtnet.io/api/user';
     console.info('try to login with wallet', {
       target,
