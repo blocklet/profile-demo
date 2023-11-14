@@ -6,6 +6,9 @@ import { createBlockletPlugin } from 'vite-plugin-blocklet';
 export default defineConfig(() => {
   return {
     plugins: [react(), createBlockletPlugin()],
+    // resolve: {
+    //   dedupe: ['@blocklet/ui-react'],
+    // },
     optimizeDeps: {
       force: true,
     },

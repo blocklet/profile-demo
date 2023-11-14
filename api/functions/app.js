@@ -21,6 +21,7 @@ server.use(cors());
 const router = express.Router();
 
 require('../routes/user').init(router);
+require('../routes/auth').init(router);
 
 if (isProduction) {
   server.use(
