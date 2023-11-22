@@ -1,3 +1,7 @@
+## 1.9.15 (November 22, 2023)
+
+- fix: dist path not found
+
 ## 1.9.14 (November 22, 2023)
 
 - chore: bump deps to latest
