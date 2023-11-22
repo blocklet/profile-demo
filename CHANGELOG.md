@@ -1,12 +1,14 @@
+## 1.9.14 (November 22, 2023)
+
+- chore: bump deps to latest
+
 ## 1.9.13 (November 13, 2023)
 
 - chore: bump deps to latest
-- [skip ci] Update README.md
 
 ## 1.9.12 (October 29, 2023)
 
 - chore: bump deps to latest
-- [skip ci] Update README.md
 
 ## 1.9.11 (September 28, 2023)
 
@@ -15,7 +17,6 @@
 ## 1.9.10 (September 21, 2023)
 
 - chore: update deps
-- [skip ci] Update README.md
 
 ## 1.9.9 (September 12, 2023)
 
@@ -48,7 +49,6 @@
 ## 1.9.2 (June 20, 2023)
 
 - chore: bump deps to latest
-- [skip ci] Update README.md
 
 ## 1.9.1 (June 15, 2023)
 
