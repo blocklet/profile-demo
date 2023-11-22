@@ -22,10 +22,10 @@
   "dependencies": {
     "@arcblock/did": "^1.18.95",
     "@arcblock/did-auth-storage-nedb": "^1.7.1",
-    "@arcblock/did-connect": "^2.8.12",
-    "@arcblock/ux": "^2.8.12",
+    "@arcblock/did-connect": "^2.8.16",
+    "@arcblock/ux": "^2.8.16",
     "@blocklet/sdk": "1.16.18",
-    "@blocklet/ui-react": "^2.8.12",
+    "@blocklet/ui-react": "^2.8.16",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@iconify-icons/logos": "^1.2.36",
