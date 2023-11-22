@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const path = require('path');
 const cors = require('cors');
-const compression = require('compression');
 const morgan = require('morgan');
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -12,7 +11,6 @@ const isProduction = process.env.NODE_ENV !== 'development';
 
 // Create and config express application
 const server = express();
-server.use(compression());
 server.use(cookieParser());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -43,14 +41,9 @@ if (isProduction) {
       return log;
     }),
   );
-  server.use(compression());
   server.use(router);
 
-  if (process.env.BLOCKLET_DID) {
-    server.use(`/${process.env.BLOCKLET_DID}`, router);
-  }
-
-  const staticDir = path.resolve(__dirname, './', 'dist');
+  const staticDir = path.resolve(__dirname, '../../', 'dist');
   server.use(express.static(staticDir, { maxAge: '365d', index: false }));
   server.use(fallback('index.html', { root: staticDir }));
 
