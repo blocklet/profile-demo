@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.9.16",
+  "version": "1.9.17",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -14,9 +14,9 @@
     "bundle:server": "blocklet bundle --create-release",
     "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
-    "update:deps": "npx taze -w && yarn",
-    "dedupe": "npx yarn-deduplicate yarn.lock && yarn",
     "coverage": "npm run test -- --coverage",
+    "update:deps": "npx taze -w && npm run dedupe",
+    "dedupe": "npx yarn-deduplicate yarn.lock && yarn",
     "bump-version": "make bump-version"
   },
   "dependencies": {
