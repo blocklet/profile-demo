@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
-import { Avatar } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 
-import { styled } from '@arcblock/ux/lib/Theme';
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
@@ -68,48 +67,50 @@ export default function Main() {
 
   return (
     <UserCenter currentTab={pathname}>
-      <MainContainer>
-        {!user && (
-          <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
-            You are not logged in yet! {preferences.welcome}
-          </div>
-        )}
+      {!user && (
+        <Box
+          sx={{
+            textAlign: 'center',
+            marginTop: '10vh',
+            fontSize: '18px',
+            color: '#888',
+          }}>
+          You are not logged in yet! {preferences.welcome}
+        </Box>
+      )}
 
-        {!!user && (
-          <div style={{ marginTop: 40 }}>
-            {rows.map((row) => {
-              if (row.name === t('common.did')) {
-                return (
-                  <InfoRow
-                    valueComponent="div"
-                    key={row.name}
-                    nameWidth={120}
-                    name={row.name}
-                    nameFormatter={() => t('common.did')}>
-                    {row.value}
-                  </InfoRow>
-                );
-              }
-
+      {!!user && (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            '&>div': {
+              mb: 0,
+            },
+          }}>
+          {rows.map((row) => {
+            if (row.name === t('common.did')) {
               return (
-                <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                <InfoRow
+                  valueComponent="div"
+                  key={row.name}
+                  nameWidth={120}
+                  name={row.name}
+                  nameFormatter={() => t('common.did')}>
                   {row.value}
                 </InfoRow>
               );
-            })}
-          </div>
-        )}
-      </MainContainer>
+            }
+
+            return (
+              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                {row.value}
+              </InfoRow>
+            );
+          })}
+        </Box>
+      )}
     </UserCenter>
   );
 }
-
-const MainContainer = styled('div')`
-  max-width: 600px;
-  margin: 0 auto;
-  .header {
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-  }
-`;
