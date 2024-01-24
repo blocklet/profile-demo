@@ -61,3 +61,11 @@ capabilities:
   component: true
   navigation: true
 components: []
+navigation:
+  - id: profile
+    title:
+      en: Profile page
+      zh: Profile 页面
+    link: /
+    section:
+      - userCenter
