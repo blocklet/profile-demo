@@ -54,14 +54,14 @@
     semver "^7.3.8"
     tweetnacl-sealedbox-js "^1.2.0"
 
-"@arcblock/did-connect@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.9.16.tgz#21c39d3b4146cc80b173aaaf976e520efccb2f5f"
-  integrity sha512-uPLLYd3KIzmZSDbeGUdOT/RyvmGm6Qwtn4u2Ivd37aco9CTFL5p5JqZ176CWvH9dOLwv8XUVAwEB64QuDQvdJQ==
+"@arcblock/did-connect@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.9.18.tgz#43ed27fd30f2b9f34478ceb0be44b24b51622825"
+  integrity sha512-TWenZ0dcOTT9WmeUCB7LLShDGITu4LHaBKz/IpmsMZ+uS9xuEpjDcQQetSFBOkLy23Ucxs7HEvJWUJGttjpWRw==
   dependencies:
-    "@arcblock/icons" "^2.9.16"
-    "@arcblock/react-hooks" "^2.9.16"
-    "@arcblock/ux" "^2.9.16"
+    "@arcblock/icons" "^2.9.18"
+    "@arcblock/react-hooks" "^2.9.18"
+    "@arcblock/ux" "^2.9.18"
     "@arcblock/ws" "^1.18.90"
     "@auth0/auth0-react" "^2.0.1"
     "@emotion/react" "^11.10.4"
@@ -145,10 +145,10 @@
     amp-message "~0.1.2"
     axon "^2.0.3"
 
-"@arcblock/icons@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.9.16.tgz#69dc60a17f8488129d2854fed5bb0c5424800418"
-  integrity sha512-usI7DtZYTd68vUkL5mkxUeJOwCUVgxI5fg7TChOdICMqYQWFSg25gsZy+Pov8DMwcnboHvWUpzrWx/4Ai6ROHw==
+"@arcblock/icons@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.9.18.tgz#cfe196bdffb76fb46f36682f985fa52ced81c346"
+  integrity sha512-UTcUpShRBKU5fhgsUYTAm0dBrmYqvNfGhuVoifT4gTcDgzmcfzUzqbgmKiKu/j8ANUfobVYXMvw3Dd6NRTmaXQ==
 
 "@arcblock/jwt@1.18.108", "@arcblock/jwt@^1.18.95":
   version "1.18.108"
@@ -162,19 +162,19 @@
     json-stable-stringify "^1.0.1"
     semver "^7.3.8"
 
-"@arcblock/nft-display@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@arcblock/nft-display/-/nft-display-2.9.16.tgz#b4480a0d71ad2b8610a76bca4d76c457102919ea"
-  integrity sha512-nEKbCAajMuuE3kxjxaxHypXqJRrfIbWKIDKIImpA5hhNg3uuxichwbdINow+5gNezh0HXNdtbiVWEyYMrrR3HQ==
+"@arcblock/nft-display@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@arcblock/nft-display/-/nft-display-2.9.18.tgz#51963f2cc4c8f6d8c3967df79ac11c0ffbd46a93"
+  integrity sha512-yNCcDhUkGHbAkeEBC+eKxGsJ1gN535S53junEOR2R9f4PGv1HDmLowyzUUHeivyYBLnMyMLcmzCjPP+QEZlvcw==
   dependencies:
     "@arcblock/did-motif" "^1.1.13"
     "@ocap/mcrypto" "^1.18.90"
     "@ocap/util" "^1.18.90"
 
-"@arcblock/react-hooks@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.9.16.tgz#00c7ccb460bc8338d74b7d58dc7288882dede0c2"
-  integrity sha512-srLly/RqFDv69NM4E/3l0ZOvojvy1aaKrk6JqcE6ZVSo+1Ud77AJWE8TRYpcT7odMEJDcaVtwSMMXwWk2KfWFg==
+"@arcblock/react-hooks@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.9.18.tgz#f2086d65f5c234755c8ca1f8e127659004937ab8"
+  integrity sha512-xBiMOF8NEwpN9hKcS3oPjMtKH8Y3pKrvpe1/L/+HuUgW/AuA7zRJ2sWJr/jcJz9PikOO8QQbyKl3qQGh6EvXjA==
   dependencies:
     core-js "^3.25.5"
     event-target-shim "^5.0.1"
@@ -192,15 +192,15 @@
     lodash.isnull "^3.0.0"
     lodash.set "^4.3.2"
 
-"@arcblock/ux@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.9.16.tgz#258ba7ab5ac5360acbefe687f4f674460a5828ac"
-  integrity sha512-pMaJRuGF+xyHJclgUWNLaBLAYIDvxTNSHPKJG+7rqyaOSqvPsDW0zPSJ7UV9Pqs9A3jb0th8Ova6rtdu3D85Rw==
+"@arcblock/ux@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.9.18.tgz#7e274a668bf984dd5ab96ea20b36fa358061eeed"
+  integrity sha512-0uqcB5+BM2J5NtlorwfWEa9GQuoWODXP5EsIe8w18YARn9Pn/2TdXaIuNeeM9DI4hSu18W9kpgnkIpmW2Z38PQ==
   dependencies:
     "@arcblock/did-motif" "^1.1.13"
-    "@arcblock/icons" "^2.9.16"
-    "@arcblock/nft-display" "^2.9.16"
-    "@arcblock/react-hooks" "^2.9.16"
+    "@arcblock/icons" "^2.9.18"
+    "@arcblock/nft-display" "^2.9.18"
+    "@arcblock/react-hooks" "^2.9.18"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
@@ -607,14 +607,14 @@
     url-join "^4.0.1"
     wait-port "^1.1.0"
 
-"@blocklet/ui-react@^2.9.16":
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.9.16.tgz#a8c24bbfb16ceb6e6792d638ffd4ceeea603bb56"
-  integrity sha512-MAUFXHezxpJZVoAAtnzqS41LMBUJEX5e+45KR/AHNmtB0g1pig4b3ZrJIRpWEsqtQDBzxmJ/WDXfvKGeFeVqrQ==
+"@blocklet/ui-react@^2.9.18":
+  version "2.9.18"
+  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.9.18.tgz#f3be08d86fcfec242e6b1abae96eb1dc3bcefb2a"
+  integrity sha512-hsPNyuV1NHg+d+dvKXx0eA9j9h06pRUInIumEbEy+WpJfGNxLUfUVpqwN8g076qxgmf13C1iR3rm9XZ9BZUV0g==
   dependencies:
     "@abtnode/constant" "1.16.23-beta-aeb9f5bd"
-    "@arcblock/did-connect" "^2.9.16"
-    "@arcblock/ux" "^2.9.16"
+    "@arcblock/did-connect" "^2.9.18"
+    "@arcblock/ux" "^2.9.18"
     "@blocklet/js-sdk" "1.16.23-beta-aeb9f5bd"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
@@ -1279,10 +1279,10 @@
   resolved "https://registry.yarnpkg.com/@react-dnd/shallowequal/-/shallowequal-2.0.0.tgz#a3031eb54129f2c66b2753f8404266ec7bf67f0a"
   integrity sha512-Pc/AFTdwZwEKJxFJvlxrSmGe/di+aAOBn60sremrpLo6VI/6cmiUYNNwlI5KNYttg7uypzA3ILPMPgxB2GYZEg==
 
-"@remix-run/router@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
-  integrity sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==
+"@remix-run/router@1.14.2":
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.14.2.tgz#4d58f59908d9197ba3179310077f25c88e49ed17"
+  integrity sha512-ACXpdMM9hmKZww21yEqWwiLws/UPLhNKvimN8RrYSqPSvB3ov7sLvAcfvaxePeLvccTQKGdkDIhLYApZVDFuKg==
 
 "@rollup/plugin-inject@^5.0.5":
   version "5.0.5"
@@ -4561,20 +4561,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@^6.4.2:
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.2.tgz#115b37d501d6d8ac870683694978c51c43e6c0d2"
-  integrity sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==
+react-router-dom@^6.21.3, react-router-dom@^6.4.2:
+  version "6.21.3"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.21.3.tgz#ef3a7956a3699c7b82c21fcb3dbc63c313ed8c5d"
+  integrity sha512-kNzubk7n4YHSrErzjLK72j0B5i969GsuCGazRl3G6j1zqZBLjuSlYBdVdkDOgzGdPIffUOc9nmgiadTEVoq91g==
   dependencies:
-    "@remix-run/router" "1.0.2"
-    react-router "6.4.2"
+    "@remix-run/router" "1.14.2"
+    react-router "6.21.3"
 
-react-router@6.4.2:
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.2.tgz#300628ee9ed81b8ef1597b5cb98b474efe9779b8"
-  integrity sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==
+react-router@6.21.3:
+  version "6.21.3"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.21.3.tgz#8086cea922c2bfebbb49c6594967418f1f167d70"
+  integrity sha512-a0H638ZXULv1OdkmiK6s6itNhoy33ywxmUFT/xtSoVyf9VnC7n7+VT4LjVzdIHSaF5TIh9ylUgxMXksHTgGrKg==
   dependencies:
-    "@remix-run/router" "1.0.2"
+    "@remix-run/router" "1.14.2"
 
 react-shadow@^19.0.3:
   version "19.0.3"

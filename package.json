@@ -33,9 +33,9 @@
   },
   "devDependencies": {
     "@arcblock/did": "^1.18.108",
-    "@arcblock/did-connect": "^2.9.16",
-    "@arcblock/ux": "^2.9.16",
-    "@blocklet/ui-react": "^2.9.16",
+    "@arcblock/did-connect": "^2.9.18",
+    "@arcblock/ux": "^2.9.18",
+    "@blocklet/ui-react": "^2.9.18",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@iconify-icons/logos": "^1.2.36",
@@ -47,6 +47,7 @@
     "nodemon": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "vite": "^5.0.12",
     "vite-plugin-blocklet": "^0.7.2"
   },

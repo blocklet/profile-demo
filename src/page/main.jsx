@@ -71,9 +71,9 @@ export default function Main() {
         <Box
           sx={{
             textAlign: 'center',
-            marginTop: '10vh',
             fontSize: '18px',
             color: '#888',
+            py: 5,
           }}>
           You are not logged in yet! {preferences.welcome}
         </Box>
@@ -90,14 +90,14 @@ export default function Main() {
             },
           }}>
           {rows.map((row) => {
-            if (row.name === t('common.did')) {
+            if (row.name === t('did')) {
               return (
                 <InfoRow
                   valueComponent="div"
                   key={row.name}
                   nameWidth={120}
                   name={row.name}
-                  nameFormatter={() => t('common.did')}>
+                  nameFormatter={() => t('did')}>
                   {row.value}
                 </InfoRow>
               );
