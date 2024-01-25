@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { styled } from '@arcblock/ux/lib/Theme';
 import dayjs from 'dayjs';
-
-import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import { Avatar, Box } from '@mui/material';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
 import DidAddress from '@arcblock/did-connect/lib/Address';
-import Header from '@blocklet/ui-react/lib/Header';
-import Footer from '@blocklet/ui-react/lib/Footer';
+import { UserCenter } from '@blocklet/ui-react';
 
 import { useSessionContext } from '../libs/session';
 
@@ -28,6 +23,7 @@ export default function Main() {
   const [user, setUser] = useState();
   const { t } = useLocaleContext();
   const { preferences } = window.blocklet;
+  const { pathname } = window.location;
 
   useEffect(() => {
     getData();
@@ -70,55 +66,51 @@ export default function Main() {
     : [];
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
-      <Box flex="1" my={4} overflow="auto">
-        <Container>
-          <MainContainer>
-            {!user && (
-              <div style={{ textAlign: 'center', marginTop: '10vh', fontSize: 18, color: '#888' }}>
-                You are not logged in yet! {preferences.welcome}
-              </div>
-            )}
+    <UserCenter currentTab={pathname}>
+      {!user && (
+        <Box
+          sx={{
+            textAlign: 'center',
+            fontSize: '18px',
+            color: '#888',
+            py: 5,
+          }}>
+          You are not logged in yet! {preferences.welcome}
+        </Box>
+      )}
 
-            {!!user && (
-              <div style={{ marginTop: 40 }}>
-                {rows.map((row) => {
-                  if (row.name === t('common.did')) {
-                    return (
-                      <InfoRow
-                        valueComponent="div"
-                        key={row.name}
-                        nameWidth={120}
-                        name={row.name}
-                        nameFormatter={() => t('common.did')}>
-                        {row.value}
-                      </InfoRow>
-                    );
-                  }
+      {!!user && (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            '&>div': {
+              mb: 0,
+            },
+          }}>
+          {rows.map((row) => {
+            if (row.name === t('did')) {
+              return (
+                <InfoRow
+                  valueComponent="div"
+                  key={row.name}
+                  nameWidth={120}
+                  name={row.name}
+                  nameFormatter={() => t('did')}>
+                  {row.value}
+                </InfoRow>
+              );
+            }
 
-                  return (
-                    <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
-                      {row.value}
-                    </InfoRow>
-                  );
-                })}
-              </div>
-            )}
-          </MainContainer>
-        </Container>
-      </Box>
-      <Footer />
-    </Box>
+            return (
+              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                {row.value}
+              </InfoRow>
+            );
+          })}
+        </Box>
+      )}
+    </UserCenter>
   );
 }
-
-const MainContainer = styled('div')`
-  max-width: 600px;
-  margin: 0 auto;
-  .header {
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-  }
-`;
