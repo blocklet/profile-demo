@@ -1,3 +1,9 @@
+## 1.10.0 (January 25, 2024)
+
+- chore: update deps
+- fix: profile page style
+- feat: use new profile page
+
 ## 1.9.18 (January 15, 2024)
 
 - chore: update deps
