@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import dayjs from 'dayjs';
-import { Avatar, Box } from '@mui/material';
-
-import InfoRow from '@arcblock/ux/lib/InfoRow';
-import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
-import Tag from '@arcblock/ux/lib/Tag';
-import DidAddress from '@arcblock/did-connect/lib/Address';
-import { UserCenter } from '@blocklet/ui-react';
+import { useState, useEffect } from 'react';
+import { Box } from '@mui/material';
+import { Header, UserCenter } from '@blocklet/ui-react';
 
 import { useSessionContext } from '../libs/session';
 
-const formatToDatetime = (date) => {
-  if (!date) {
-    return '-';
-  }
-
-  return dayjs(date).format('YYYY-MM-DD hh:mm:ss');
-};
-
 export default function Main() {
-  const { session, api } = useSessionContext();
+  const { session, api, connectApi } = useSessionContext();
   const [user, setUser] = useState();
-  const { t } = useLocaleContext();
   const { preferences } = window.blocklet;
   const { pathname } = window.location;
 
@@ -40,77 +25,60 @@ export default function Main() {
       });
   };
 
-  const rows = !!user
-    ? [
-        { name: t('name'), value: user.fullName },
-        preferences.displayAvatar ? { name: t('avatar'), value: <Avatar alt="" src={user.avatar}></Avatar> } : null,
-        { name: t('did'), value: <DidAddress>{user.did}</DidAddress> },
-        { name: t('email'), value: user.email },
-        {
-          name: t('passports'),
-          value: user.passports
-            ? user.passports.map((passport) => (
-                <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'primary'}>
-                  {passport.title}
-                </Tag>
-              ))
-            : '--',
-        },
-        {
-          name: t('role'),
-          value: <Tag type={user.role === 'owner' ? 'success' : 'primary'}>{user.role}</Tag>,
-        },
-        { name: t('lastLogin'), value: formatToDatetime(user.updatedAt) },
-        { name: t('createdAt'), value: formatToDatetime(user.createdAt) },
-      ].filter(Boolean)
-    : [];
+  const params = {
+    switchBehavior: 'auto',
+    forceConnected: 'z1fUwUgKjtPEJs6ABLePEdzjdDEvZvwWp4h',
+    // forceConnected: 'z1cT33B6mTr95QKXK2wvDum9n1H78gmLFij',
+    sourceAppPid: 'zNKYcyBgNoHQ3GHjUQJUkJH8op4CLXyQH4ee',
+    // forceConnected: 'z1giMkK9vzvA5JMS2HASvL8g2tGzJNsZPSY',
+    // sourceAppPid: 'zNKmmPJhp43ufAYLV39pffRzK2jnVABG2ZSX',
+  };
 
-  return (
-    <UserCenter currentTab={pathname}>
-      {!user && (
-        <Box
-          sx={{
-            textAlign: 'center',
-            fontSize: '18px',
-            color: '#888',
-            py: 5,
-          }}>
-          You are not logged in yet! {preferences.welcome}
-        </Box>
-      )}
+  const urlInstance = new URL(location.href);
+  urlInstance.searchParams.set('__did-connect__', Buffer.from(JSON.stringify(params), 'utf8').toString('base64'));
+  const urlAuto = urlInstance.href;
 
-      {!!user && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-            '&>div': {
-              mb: 0,
-            },
-          }}>
-          {rows.map((row) => {
-            if (row.name === t('did')) {
-              return (
-                <InfoRow
-                  valueComponent="div"
-                  key={row.name}
-                  nameWidth={120}
-                  name={row.name}
-                  nameFormatter={() => t('did')}>
-                  {row.value}
-                </InfoRow>
-              );
-            }
+  urlInstance.searchParams.set(
+    '__did-connect__',
+    Buffer.from(JSON.stringify({ ...params, switchBehavior: 'required' }), 'utf8').toString('base64'),
+  );
+  const urlRequired = urlInstance.href;
+  urlInstance.searchParams.set(
+    '__did-connect__',
+    Buffer.from(JSON.stringify({ ...params, switchBehavior: 'disabled' }), 'utf8').toString('base64'),
+  );
+  const urlDisabled = urlInstance.href;
 
-            return (
-              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
-                {row.value}
-              </InfoRow>
-            );
-          })}
-        </Box>
-      )}
+  return user ? (
+    <UserCenter
+      currentTab={pathname}
+      // userDid="z1fE6GTBW7ewzFr6CKPx88pVKQEndyDhHzX"
+    >
+      Hello, {user.fullName}
+      <ul>
+        <li>
+          <a href={urlAuto}>auto</a>
+        </li>
+        <li>
+          <a href={urlRequired}>required</a>
+        </li>
+        <li>
+          <a href={urlDisabled}>disabled</a>
+        </li>
+      </ul>
     </UserCenter>
+  ) : (
+    <>
+      <Header />
+      <Box
+        sx={{
+          textAlign: 'center',
+          fontSize: '18px',
+          color: '#888',
+          py: 5,
+        }}>
+        You are not logged in yet! {preferences.welcome}
+      </Box>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import { LocaleProvider } from '@arcblock/ux/lib/Locale/context';
 import { SessionProvider } from './libs/session';
 import { translations } from './locales';
 import Main from './page/main';
+// import Main from './page/test';
 
 let prefix = '/';
 if (window.blocklet && window.blocklet.prefix) {

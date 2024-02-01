@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: lts
 
-      - name: Cache Yarn and node-modules
+      - name: Cache node-modules
         uses: auguwu/node-pm-cache@master
 
       - name: Init
