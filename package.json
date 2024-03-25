@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.10.1",
+  "version": "1.11.0",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -20,26 +20,32 @@
     "bump-version": "make bump-version"
   },
   "dependencies": {
-    "@blocklet/sdk": "^1.16.23",
-    "@ocap/mcrypto": "^1.18.110",
-    "@ocap/util": "^1.18.110",
-    "@ocap/wallet": "^1.18.110",
+    "@blocklet/sdk": "^1.16.24",
+    "@ocap/mcrypto": "^1.18.113",
+    "@ocap/util": "^1.18.113",
+    "@ocap/wallet": "^1.18.113",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.19.1",
     "fs-extra": "^11.2.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "notistack": "^3.0.1",
+    "p-all": "^5.0.0",
+    "qrcode.react": "^3.1.0",
+    "ua-parser-js": "^1.0.37"
   },
   "devDependencies": {
-    "@arcblock/did": "^1.18.110",
-    "@arcblock/did-connect": "^2.9.38",
-    "@arcblock/ux": "^2.9.38",
-    "@blocklet/ui-react": "^2.9.38",
-    "@emotion/react": "^11.11.3",
+    "@arcblock/did": "^1.18.113",
+    "@arcblock/did-connect": "^2.9.62",
+    "@arcblock/ux": "^2.9.62",
+    "@auth0/auth0-react": "^2.2.4",
+    "@blocklet/ui-react": "^2.9.62",
+    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@iconify-icons/logos": "^1.2.36",
-    "@mui/material": "^5.15.11",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
     "@vitejs/plugin-react": "^4.2.1",
     "dayjs": "^1.11.10",
     "dotenv-flow": "^4.1.0",
@@ -47,9 +53,8 @@
     "nodemon": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1",
-    "vite": "^5.1.4",
-    "vite-plugin-blocklet": "^0.7.2"
+    "vite": "^5.2.6",
+    "vite-plugin-blocklet": "^0.7.5"
   },
   "eslintConfig": {
     "extends": [

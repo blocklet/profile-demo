@@ -5,8 +5,9 @@ import { Avatar, Box } from '@mui/material';
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
-import DidAddress from '@arcblock/did-connect/lib/Address';
+import DID from '@arcblock/ux/lib/DID';
 import { UserCenter } from '@blocklet/ui-react';
+import uniqBy from 'lodash/uniqBy';
 
 import { useSessionContext } from '../libs/session';
 
@@ -44,17 +45,21 @@ export default function Main() {
     ? [
         { name: t('name'), value: user.fullName },
         preferences.displayAvatar ? { name: t('avatar'), value: <Avatar alt="" src={user.avatar}></Avatar> } : null,
-        { name: t('did'), value: <DidAddress>{user.did}</DidAddress> },
+        { name: t('did'), value: <DID did={user.did} showQrcode locale="zh" /> },
         { name: t('email'), value: user.email },
         {
           name: t('passports'),
-          value: user.passports
-            ? user.passports.map((passport) => (
+          value: user.passports ? (
+            <Box sx={{ display: 'flex', gap: 1 }}>
+              {uniqBy(user.passports, 'name').map((passport) => (
                 <Tag key={passport.name} type={passport.name === 'owner' ? 'success' : 'primary'}>
                   {passport.title}
                 </Tag>
-              ))
-            : '--',
+              ))}
+            </Box>
+          ) : (
+            '--'
+          ),
         },
         {
           name: t('role'),
@@ -66,51 +71,57 @@ export default function Main() {
     : [];
 
   return (
-    <UserCenter currentTab={pathname}>
-      {!user && (
-        <Box
-          sx={{
-            textAlign: 'center',
-            fontSize: '18px',
-            color: '#888',
-            py: 5,
-          }}>
-          You are not logged in yet! {preferences.welcome}
-        </Box>
-      )}
+    <>
+      {/* Current Page: {pathname} */}
+      <UserCenter currentTab={pathname}>
+        {!user && (
+          <Box
+            sx={{
+              textAlign: 'center',
+              fontSize: '18px',
+              color: '#888',
+              py: 5,
+            }}>
+            You are not logged in yet! {preferences.welcome}
+          </Box>
+        )}
+        {!!user && (
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 2,
+              '&>div': {
+                mb: 0,
+              },
+              '.info-row__name': {
+                fontWeight: 'bold',
+                color: 'grey.800',
+              },
+            }}>
+            {rows.map((row) => {
+              if (row.name === t('did')) {
+                return (
+                  <InfoRow
+                    valueComponent="div"
+                    key={row.name}
+                    nameWidth={120}
+                    name={row.name}
+                    nameFormatter={() => t('did')}>
+                    {row.value}
+                  </InfoRow>
+                );
+              }
 
-      {!!user && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-            '&>div': {
-              mb: 0,
-            },
-          }}>
-          {rows.map((row) => {
-            if (row.name === t('did')) {
               return (
-                <InfoRow
-                  valueComponent="div"
-                  key={row.name}
-                  nameWidth={120}
-                  name={row.name}
-                  nameFormatter={() => t('did')}>
+                <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
                   {row.value}
                 </InfoRow>
               );
-            }
-
-            return (
-              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
-                {row.value}
-              </InfoRow>
-            );
-          })}
-        </Box>
-      )}
-    </UserCenter>
+            })}
+          </Box>
+        )}
+      </UserCenter>
+    </>
   );
 }

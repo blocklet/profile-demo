@@ -1,3 +1,7 @@
+## 1.11.0 (March 25, 2024)
+
+- chore: update homepage
+
 ## 1.10.1 (February 26, 2024)
 
 - chore: update deps
