@@ -1,3 +1,8 @@
+## 1.12.0 (April 07, 2024)
+
+- chore: update deps
+- [skip ci] Update README.md
+
 ## 1.11.0 (March 25, 2024)
 
 - chore: update homepage
