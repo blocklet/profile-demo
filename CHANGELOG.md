@@ -1,3 +1,7 @@
+## 1.13.0 (April 07, 2024)
+
+- chore: update deps
+
 ## 1.12.0 (April 07, 2024)
 
 - chore: update deps
