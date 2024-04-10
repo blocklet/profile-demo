@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "@blocklet/sdk": "^1.16.25",
-    "@ocap/mcrypto": "^1.18.114",
-    "@ocap/util": "^1.18.114",
-    "@ocap/wallet": "^1.18.114",
+    "@ocap/mcrypto": "^1.18.115",
+    "@ocap/util": "^1.18.115",
+    "@ocap/wallet": "^1.18.115",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -36,11 +36,11 @@
     "ua-parser-js": "^1.0.37"
   },
   "devDependencies": {
-    "@arcblock/did": "^1.18.114",
-    "@arcblock/did-connect": "^2.9.64",
-    "@arcblock/ux": "^2.9.64",
+    "@arcblock/did": "^1.18.115",
+    "@arcblock/did-connect": "^2.9.65",
+    "@arcblock/ux": "^2.9.66",
     "@auth0/auth0-react": "^2.2.4",
-    "@blocklet/ui-react": "^2.9.64",
+    "@blocklet/ui-react": "^2.9.66",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@iconify-icons/logos": "^1.2.36",
