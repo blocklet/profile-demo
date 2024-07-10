@@ -1,3 +1,9 @@
+## 1.14.0 (July 10, 2024)
+
+- chore: remove useless code
+- feat: support use require with vite-node
+- feat: use vite-node
+
 ## 1.13.1 (July 10, 2024)
 
 - chore(deps): update deps

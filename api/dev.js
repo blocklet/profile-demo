@@ -1,5 +1,8 @@
-const { setupClient } = require('vite-plugin-blocklet');
+const { app, server } = require('./index');
 
-const { app } = require('./index');
-
-setupClient(app);
+import('vite-plugin-blocklet').then(({ setupClient }) => {
+  setupClient(app, {
+    server,
+    importMetaHot: import.meta.hot,
+  });
+});
