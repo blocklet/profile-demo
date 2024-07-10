@@ -49,7 +49,7 @@
     "react-router-dom": "^6.24.1",
     "vite": "^5.3.3",
     "vite-node": "^2.0.1",
-    "vite-plugin-blocklet": "^0.8.6",
+    "vite-plugin-blocklet": "^0.8.7",
     "vite-plugin-require": "^1.2.14"
   },
   "eslintConfig": {
