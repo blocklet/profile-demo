@@ -1,8 +1,8 @@
-import { setupClient } from 'vite-plugin-blocklet';
+const { app, server } = require('./index');
 
-import { app, server } from './index';
-
-setupClient(app);
+import('vite-plugin-blocklet').then(({ setupClient }) => {
+  setupClient(app);
+});
 
 if (import.meta.hot) {
   async function killServer() {

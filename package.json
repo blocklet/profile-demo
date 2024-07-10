@@ -8,7 +8,7 @@
     "dev": "blocklet dev",
     "lint": "eslint src api",
     "clean": "rm -rf build",
-    "start": "vite-node -w api/dev.js",
+    "start": "vite-node -c vite-server.config.js -w api/dev.js",
     "bundle": "npm run clean && npm run bundle:client && npm run bundle:server",
     "bundle:client": "vite build",
     "bundle:server": "blocklet bundle --create-release",
@@ -49,7 +49,8 @@
     "react-router-dom": "^6.24.1",
     "vite": "^5.3.3",
     "vite-node": "^2.0.1",
-    "vite-plugin-blocklet": "^0.8.5"
+    "vite-plugin-blocklet": "^0.8.5",
+    "vite-plugin-require": "^1.2.14"
   },
   "eslintConfig": {
     "extends": [

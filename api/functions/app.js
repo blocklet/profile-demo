@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import path from 'path';
-import cors from 'cors';
-import morgan from 'morgan';
-import express from 'express';
-import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
-import fallback from '@blocklet/sdk/lib/middlewares/fallback';
+const path = require('path');
+const cors = require('cors');
+const morgan = require('morgan');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
 
-import userRoutes from '../routes/user';
+const userRoutes = require('../routes/user');
 
 const isProduction = process.env.NODE_ENV !== 'development';
 
@@ -62,4 +62,4 @@ if (isProduction) {
   server.use(router);
 }
 
-export { server };
+module.exports = { server };
