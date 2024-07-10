@@ -16,6 +16,7 @@ blocklet.js.LICENSE.txt
 # production
 /build
 /dist
+/.docker
 
 # misc
 .DS_Store
