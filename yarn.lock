@@ -5871,10 +5871,10 @@ vite-node@^2.0.1:
     picocolors "^1.0.1"
     vite "^5.0.0"
 
-vite-plugin-blocklet@^0.8.6:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/vite-plugin-blocklet/-/vite-plugin-blocklet-0.8.6.tgz#16af4cae736e55558e82caf40e6510d6010d6cbd"
-  integrity sha512-W+CzSjXGX23PyiHdwnLE6SylKFNZIBYEKt435oi5Ukg0InF29a5H1HmYahpfMpKRanJzim6EJfln1CSujlYCFw==
+vite-plugin-blocklet@^0.8.7:
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/vite-plugin-blocklet/-/vite-plugin-blocklet-0.8.7.tgz#ac3a6b5a86d108baa04ecfd58376251a65144f0c"
+  integrity sha512-wgS4uM+ZlJ9K48ggkiSA6Y8i6DnIICgKjhLrC67z1zkdeEOuE4j+xI64BabCcgyrcQQvGq4J1mvwp+rSHloy9Q==
   dependencies:
     "@arcblock/did" "^1.18.126"
     "@ocap/mcrypto" "^1.18.126"

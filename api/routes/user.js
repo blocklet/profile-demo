@@ -6,7 +6,9 @@ const authClient = new AuthService();
 module.exports = {
   init(app) {
     app.get('/api/did/user', middlewares.user(), async (req, res) => {
-      res.json({ user: req.user });
+      res.json({
+        user: req.user,
+      });
     });
 
     app.get('/api/user', middlewares.user(), async (req, res) => {

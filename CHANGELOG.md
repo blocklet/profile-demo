@@ -1,3 +1,7 @@
+## 1.14.1 (July 10, 2024)
+
+- chore(deps): update deps
+
 ## 1.14.0 (July 10, 2024)
 
 - chore: remove useless code
