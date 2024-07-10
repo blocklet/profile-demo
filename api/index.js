@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
-require('dotenv-flow').config();
+import dotenv from 'dotenv-flow';
+dotenv.config();
 
-const { server } = require('./functions/app');
+import { server as app } from './functions/app';
 
 const port = parseInt(process.env.BLOCKLET_PORT, 10) || 3030;
-server.listen(port, (err) => {
+const server = app.listen(port, (err) => {
+const server = app.listen(port, (err) => {
   if (err) throw err;
   console.log(`> app ready on ${port}`);
 });
 
-module.exports = {
-  app: server,
-};
+export { app, server };

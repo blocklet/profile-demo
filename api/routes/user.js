@@ -1,9 +1,9 @@
-const AuthService = require('@blocklet/sdk/service/auth');
-const middlewares = require('@blocklet/sdk/lib/middlewares');
+import AuthService from '@blocklet/sdk/service/auth';
+import middlewares from '@blocklet/sdk/lib/middlewares';
 
 const authClient = new AuthService();
 
-module.exports = {
+export default {
   init(app) {
     app.get('/api/did/user', middlewares.user(), async (req, res) => {
       res.json({ user: req.user });
@@ -25,7 +25,7 @@ module.exports = {
     });
     app.get('/api/users', async (req, res) => {
       const data = await authClient.getUsers();
-      res.json(data);
+      res.json({ data });
     });
   },
 };
