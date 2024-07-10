@@ -23,9 +23,5 @@ module.exports = {
         res.json({ user: null });
       }
     });
-    app.get('/api/users', async (req, res) => {
-      const data = await authClient.getUsers();
-      res.json({ data });
-    });
   },
 };
