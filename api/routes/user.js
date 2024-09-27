@@ -5,13 +5,13 @@ const authClient = new AuthService();
 
 module.exports = {
   init(app) {
-    app.get('/api/did/user', middlewares.user(), async (req, res) => {
+    app.get('/api/did/user', middlewares.session(), async (req, res) => {
       res.json({
         user: req.user,
       });
     });
 
-    app.get('/api/user', middlewares.user(), async (req, res) => {
+    app.get('/api/user', middlewares.session(), async (req, res) => {
       if (!req.user) {
         res.json({ user: null });
         return;
