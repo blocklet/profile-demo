@@ -1,3 +1,8 @@
+## 1.14.5 (September 27, 2024)
+
+- chore: bump deps to latest
+- [skip ci] Update README.md
+
 ## 1.14.4 (September 12, 2024)
 
 - chore: bump deps to latest
