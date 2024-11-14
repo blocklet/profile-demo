@@ -1,3 +1,7 @@
+## 1.14.7 (November 14, 2024)
+
+- chore: update deps
+
 ## 1.14.6 (October 16, 2024)
 
 - feat: support tracking pageView and events for GA
