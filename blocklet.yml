@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.14.7
+version: 1.14.8
 main: api/index.js
 author:
   name: ArcBlock
@@ -69,3 +69,4 @@ navigation:
     link: /
     section:
       - userCenter
+egress: true
