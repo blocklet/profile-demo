@@ -10,13 +10,12 @@
     "clean": "rm -rf build",
     "start": "vite-node -c vite.config.server.js -w api/dev.js",
     "bundle": "npm run clean && npm run bundle:client && npm run bundle:server",
-    "bundle:client": "vite build",
-    "bundle:server": "blocklet bundle --compact --create-release",
+    "build:client": "vite build",
+    "build:server": "blocklet bundle --compact --create-release",
     "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "coverage": "npm run test -- --coverage",
-    "update:deps": "npx taze -w && npm run dedupe",
-    "dedupe": "npx yarn-deduplicate yarn.lock && yarn",
+    "update:deps": "npx -y taze latest -r -w -n '/@abtnode|@aigne|@arcblock|@blocklet|@did-connect|@did-pay|@did-space|@nft-store|@nft-studio|@ocap|vite-plugin-blocklet/' && pnpm i && pnpm dedupe",
     "bump-version": "make bump-version"
   },
   "dependencies": {
