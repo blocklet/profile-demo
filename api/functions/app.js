@@ -22,7 +22,7 @@ const router = express.Router();
 
 userRoutes.init(router);
 
-if (isProduction) {
+if (isProduction || process.env.PREVIEW) {
   server.use(
     morgan((tokens, req, res) => {
       const log = [
