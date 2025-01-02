@@ -47,25 +47,7 @@ if (isProduction || process.env.PREVIEW) {
   server.use(router);
 
   const staticDir = path.resolve(__dirname, '../../', 'dist');
-  server.use(
-    express.static(staticDir, {
-      maxAge: 0,
-      index: false,
-      setHeaders: (res, path) => {
-        if (path.endsWith('service-worker.js')) {
-          try {
-            const componentDid = process.env.BLOCKLET_COMPONENT_DID;
-            const mountPoints = JSON.parse(process.env.BLOCKLET_MOUNT_POINTS);
-            const findMountPoint = mountPoints.find((x) => x.did === componentDid);
-            res.set('Service-Worker-Allowed', withTrailingSlash(findMountPoint?.mountPoint));
-          } catch {
-            // 获取当前 blocklet 的 prefix
-            res.set('Service-Worker-Allowed', '/');
-          }
-        }
-      },
-    }),
-  );
+  server.use(express.static(staticDir, { maxAge: '365d', index: false }));
   server.use(fallback('index.html', { root: staticDir }));
 
   server.use((req, res) => {
