@@ -6,7 +6,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
-const { withTrailingSlash } = require('ufo');
 
 const userRoutes = require('../routes/user');
 
