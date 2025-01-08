@@ -20,10 +20,10 @@
     "bump-version": "make bump-version"
   },
   "dependencies": {
-    "@blocklet/sdk": "^1.16.36",
-    "@ocap/mcrypto": "^1.18.165",
-    "@ocap/util": "^1.18.165",
-    "@ocap/wallet": "^1.18.165",
+    "@blocklet/sdk": "^1.16.37",
+    "@ocap/mcrypto": "^1.19.2",
+    "@ocap/util": "^1.19.2",
+    "@ocap/wallet": "^1.19.2",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -31,10 +31,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.11.15",
-    "@arcblock/ux": "^2.11.15",
-    "@blocklet/js-sdk": "^1.16.36",
-    "@blocklet/ui-react": "^2.11.15",
+    "@arcblock/did-connect": "^2.11.22",
+    "@arcblock/ux": "^2.11.22",
+    "@blocklet/js-sdk": "^1.16.37",
+    "@blocklet/ui-react": "^2.11.22",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
