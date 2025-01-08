@@ -1,6 +1,10 @@
+## 1.14.10 (January 08, 2025)
+
+- chore: bump deps to latest
+
 ## 1.14.9 (December 30, 2024)
 
-
+- chore: bump deps to latest
 
 ## 1.14.8 (December 22, 2024)
 
