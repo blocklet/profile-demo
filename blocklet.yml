@@ -50,6 +50,12 @@ environments:
     default: beta
     secure: false
     shared: true
+  - name: ENABLED_SERVICE_WORKER
+    description: Enable service worker or not?
+    required: false
+    default: 'true'
+    secure: false
+    shared: true
 scripts:
   dev: npm run start
 screenshots: []
