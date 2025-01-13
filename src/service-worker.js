@@ -21,6 +21,8 @@ routing.registerRoute(
 routing.registerRoute(
   new routing.Route(
     ({ request, url }) => {
+      const whitelist = ['/.well-known/service/api/user/privacy/config'];
+      if (whitelist.includes(url.pathname)) return true;
       if (!self.blocklet.canCache({ url })) return false;
       return request.method === 'GET';
     },
