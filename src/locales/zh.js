@@ -1,4 +1,4 @@
-import { flatten } from 'flat';
+import flatten from 'flat';
 
 export default flatten({
   name: '姓名',
