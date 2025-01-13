@@ -70,8 +70,9 @@ export default function Main() {
 
   return (
     <>
-      <UserCenter currentTab={pathname}>
-        {!session.user && (
+      <UserCenter
+        currentTab={pathname}
+        notLoginContent={
           <Box
             sx={{
               textAlign: 'center',
@@ -81,43 +82,42 @@ export default function Main() {
             }}>
             You are not logged in yet! {preferences.welcome}
           </Box>
-        )}
-        {!!session.user && (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 2,
-              '&>div': {
-                mb: 0,
-              },
-              '.info-row__name': {
-                fontWeight: 'bold',
-                color: 'grey.800',
-              },
-            }}>
-            {rows.map((row) => {
-              if (row.name === t('did')) {
-                return (
-                  <InfoRow
-                    valueComponent="div"
-                    key={row.name}
-                    nameWidth={120}
-                    name={row.name}
-                    nameFormatter={() => t('did')}>
-                    {row.value}
-                  </InfoRow>
-                );
-              }
-
+        }>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            '&>div': {
+              mb: 0,
+            },
+            '.info-row__name': {
+              fontWeight: 'bold',
+              color: 'grey.800',
+            },
+          }}>
+          {rows.map((row) => {
+            if (row.name === t('did')) {
               return (
-                <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                <InfoRow
+                  valueComponent="div"
+                  key={row.name}
+                  nameWidth={120}
+                  name={row.name}
+                  nameFormatter={() => t('did')}>
                   {row.value}
                 </InfoRow>
               );
-            })}
-          </Box>
-        )}
+            }
+
+            return (
+              <InfoRow valueComponent="div" key={row.name} nameWidth={120} name={row.name}>
+                {row.value}
+              </InfoRow>
+            );
+          })}
+        </Box>
+
         <Button
           sx={{ mt: 2 }}
           variant="contained"

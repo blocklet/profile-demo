@@ -1,3 +1,7 @@
+## 1.14.11 (January 13, 2025)
+
+- chore: polish sw cache logic
+
 ## 1.14.10 (January 08, 2025)
 
 - chore: bump deps to latest

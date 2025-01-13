@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.14.10
+version: 1.14.11
 main: api/index.js
 author:
   name: ArcBlock
@@ -58,7 +58,8 @@ environments:
     shared: true
 scripts:
   dev: npm run start
-screenshots: []
+screenshots:
+  - 0-screenshot.png
 payment:
   price: []
   share: []

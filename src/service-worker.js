@@ -9,7 +9,7 @@ precaching.precacheAndRoute(
 routing.registerRoute(
   new routing.Route(
     ({ request, url }) => {
-      if (!self.blocklet.checkBelongToMyself({ url })) return false;
+      if (!self.blocklet.canCache({ url })) return false;
       return ['image', 'font', 'style', 'script'].includes(request.destination);
     },
     new strategies.CacheFirst({
@@ -21,7 +21,7 @@ routing.registerRoute(
 routing.registerRoute(
   new routing.Route(
     ({ request, url }) => {
-      if (!self.blocklet.checkBelongToMyself({ url })) return false;
+      if (!self.blocklet.canCache({ url })) return false;
       return request.method === 'GET';
     },
     new strategies.NetworkFirst({
