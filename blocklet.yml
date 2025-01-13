@@ -58,7 +58,8 @@ environments:
     shared: true
 scripts:
   dev: npm run start
-screenshots: []
+screenshots:
+  - 0-screenshot.png
 payment:
   price: []
   share: []
