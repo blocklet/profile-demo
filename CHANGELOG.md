@@ -1,3 +1,8 @@
+## 1.14.12 (January 13, 2025)
+
+- fix: add api cache
+- [skip ci] Update README.md
+
 ## 1.14.11 (January 13, 2025)
 
 - chore: polish sw cache logic
