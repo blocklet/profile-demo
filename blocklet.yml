@@ -67,6 +67,7 @@ capabilities:
   clusterMode: false
   component: true
   navigation: true
+  didSpace: requiredOnConnect
 components: []
 navigation:
   - id: profile
