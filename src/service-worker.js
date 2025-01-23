@@ -1,5 +1,3 @@
-importScripts('/.well-known/service/static/share/shared-service-worker.js');
-
 const { strategies, precaching, core, routing } = self.blocklet.workbox;
 
 precaching.precacheAndRoute(

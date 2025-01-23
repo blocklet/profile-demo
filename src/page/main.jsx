@@ -71,7 +71,7 @@ export default function Main() {
   return (
     <>
       <UserCenter
-        currentTab={pathname}
+        currentTab={window.blocklet.prefix}
         notLoginContent={
           <Box
             sx={{
