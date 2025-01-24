@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const exclude = [];
   const alias = {};
+  if (mode === 'production') {
+    alias.lodash = 'lodash-es';
+  }
   if (env.ENABLED_ALIAS_BLOCKLET === 'true') {
     const excludeLibs = [
       // 排除 ux repo 中其他的包

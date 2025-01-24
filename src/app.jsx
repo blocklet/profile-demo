@@ -15,7 +15,8 @@ function App() {
         <SessionProvider>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Main />} />
+            {/* <Route path="*" element={<Navigate to="/" />} /> */}
           </Routes>
         </SessionProvider>
       </LocaleProvider>
