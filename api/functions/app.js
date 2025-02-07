@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 const path = require('path');
 const cors = require('cors');
-const morgan = require('morgan');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
+const logger = require('@blocklet/logger');
 
 const userRoutes = require('../routes/user');
 
@@ -13,6 +13,9 @@ const isProduction = process.env.NODE_ENV !== 'development';
 
 // Create and config express application
 const server = express();
+
+logger.setupAccessLogger(server);
+
 server.use(cookieParser());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -23,26 +26,6 @@ const router = express.Router();
 userRoutes.init(router);
 
 if (isProduction || process.env.PREVIEW) {
-  server.use(
-    morgan((tokens, req, res) => {
-      const log = [
-        tokens.method(req, res),
-        tokens.url(req, res),
-        tokens.status(req, res),
-        tokens.res(req, res, 'content-length'),
-        '-',
-        tokens['response-time'](req, res),
-        'ms',
-      ].join(' ');
-
-      if (isProduction) {
-        // Log only in AWS context to get back function logs
-        console.log(log);
-      }
-
-      return log;
-    }),
-  );
   server.use(router);
 
   const staticDir = path.resolve(__dirname, '../../', 'dist');

@@ -2,6 +2,8 @@ const AuthService = require("@blocklet/sdk/service/auth");
 const middlewares = require("@blocklet/sdk/lib/middlewares");
 const component = require("@blocklet/sdk/lib/component");
 
+const logger = require('@blocklet/logger')('user');
+
 const authClient = new AuthService();
 
 module.exports = {
@@ -27,7 +29,7 @@ module.exports = {
         user.role = user.role || req.user.role;
         res.json({ user });
       } catch (err) {
-        console.error(err);
+        logger.error(err);
         res.json({ user: null });
       }
     });
@@ -38,7 +40,7 @@ module.exports = {
 
     app.get("/api/call2", async (req, res) => {
       const random = Math.random();
-      console.log("random", random);
+      logger.info("random", random);
       if (random > 0.5) {
         res.status(500).json({ error: "Random error" });
       } else {
@@ -58,7 +60,7 @@ module.exports = {
         );
         res.json({ source: "component", result: result.data });
       } catch (err) {
-        console.error(err);
+        logger.error(err);
         res.status(500).json({ error: "Component call failed" });
       }
     });
