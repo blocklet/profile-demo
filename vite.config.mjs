@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
   if (env.ENABLED_ALIAS_BLOCKLET === 'true') {
     const excludeLibs = [
       // 排除 ux repo 中其他的包
-      '@arcblock/bridge',
+      // '@arcblock/bridge',
       '@arcblock/icons',
       '@arcblock/react-hooks',
       '@arcblock/nft-display',
@@ -38,6 +38,7 @@ export default defineConfig(({ mode }) => {
       alias['@arcblock/did-connect/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/did-connect/src`;
       alias['@blocklet/ui-react/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-ui-react/src`;
       alias['@blocklet/ui-react'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-ui-react/src/index.ts`;
+      alias['@arcblock/bridge'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/bridge/src/index.js`;
       // alias['@blocklet/launcher-layout/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-launcher-layout/src`;
       // alias['@blocklet/launcher-layout'] =
       //   `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-launcher-layout/src/index.jsx`;

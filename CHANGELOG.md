@@ -1,3 +1,7 @@
+## 1.14.16 (February 09, 2025)
+
+- chore(deps): update deps
+
 ## 1.14.15 (February 07, 2025)
 
 - chore: use blocklet logger

@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.14.15",
+  "version": "1.14.16",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -21,8 +21,8 @@
     "bump-version": "make bump-version"
   },
   "dependencies": {
-    "@blocklet/sdk": "^1.16.38",
     "@blocklet/logger": "^1.16.38",
+    "@blocklet/sdk": "^1.16.38",
     "@ocap/mcrypto": "^1.19.9",
     "@ocap/util": "^1.19.9",
     "@ocap/wallet": "^1.19.9",
@@ -32,10 +32,10 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.11.30",
-    "@arcblock/ux": "^2.11.30",
+    "@arcblock/did-connect": "^2.11.31",
+    "@arcblock/ux": "^2.11.31",
     "@blocklet/js-sdk": "^1.16.38",
-    "@blocklet/ui-react": "^2.11.30",
+    "@blocklet/ui-react": "^2.11.31",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
