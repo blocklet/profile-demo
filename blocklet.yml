@@ -78,3 +78,6 @@ navigation:
     section:
       - userCenter
 egress: true
+events:
+  - type: 'dummy.event'
+    description: 'This is a dummy event from profile demo'

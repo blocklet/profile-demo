@@ -8,11 +8,14 @@ const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
 const logger = require('@blocklet/logger');
 
 const userRoutes = require('../routes/user');
+const events = require('../libs/event');
 
 const isProduction = process.env.NODE_ENV !== 'development';
 
 // Create and config express application
 const server = express();
+
+events.init();
 
 logger.setupAccessLogger(server);
 
