@@ -1,7 +1,10 @@
+## 1.14.18 (February 27, 2025)
+
+- feat: support event bus
+
 ## 1.14.17 (February 20, 2025)
 
 - chore(deps): update deps
-- [skip ci] Update README.md
 
 ## 1.14.16 (February 09, 2025)
 
@@ -15,7 +18,6 @@
 
 - chore(deps): update deps
 - chore: clean sw content
-- [skip ci] Update README.md
 
 ## 1.14.13 (January 14, 2025)
 

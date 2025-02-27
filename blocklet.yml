@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.14.17
+version: 1.14.18
 main: api/index.js
 author:
   name: ArcBlock
@@ -79,5 +79,5 @@ navigation:
       - userCenter
 egress: true
 events:
-  - type: 'dummy.event'
-    description: 'This is a dummy event from profile demo'
+  - type: dummy.event
+    description: This is a dummy event from profile demo
