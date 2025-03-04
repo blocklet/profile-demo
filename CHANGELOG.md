@@ -1,3 +1,7 @@
+## 1.15.0 (March 04, 2025)
+
+- chore: update deps
+
 ## 1.14.18 (February 27, 2025)
 
 - feat: support event bus
