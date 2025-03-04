@@ -1,3 +1,7 @@
+## 1.16.0 (March 04, 2025)
+
+- chore: bump version
+
 ## 1.15.0 (March 04, 2025)
 
 - chore: update deps
