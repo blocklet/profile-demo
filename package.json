@@ -21,8 +21,10 @@
     "bump-version": "make bump-version"
   },
   "dependencies": {
+    "@arcblock/did-auth-storage-nedb": "^1.7.1",
     "@blocklet/logger": "^1.16.39",
     "@blocklet/sdk": "^1.16.39",
+    "@ocap/client": "^1.19.14",
     "@ocap/mcrypto": "^1.19.14",
     "@ocap/util": "^1.19.14",
     "@ocap/wallet": "^1.19.14",
@@ -32,10 +34,10 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.12.1",
-    "@arcblock/ux": "^2.12.1",
+    "@arcblock/did-connect": "^2.12.2",
+    "@arcblock/ux": "^2.12.2",
     "@blocklet/js-sdk": "^1.16.39",
-    "@blocklet/ui-react": "^2.12.1",
+    "@blocklet/ui-react": "^2.12.2",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",

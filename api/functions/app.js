@@ -8,6 +8,7 @@ const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
 const logger = require('@blocklet/logger');
 
 const userRoutes = require('../routes/user');
+const authRoutes = require('../routes/auth');
 const events = require('../libs/event');
 
 const isProduction = process.env.NODE_ENV !== 'development';
@@ -27,6 +28,7 @@ server.use(cors());
 const router = express.Router();
 
 userRoutes.init(router);
+authRoutes.init(router);
 
 if (isProduction || process.env.PREVIEW) {
   server.use(router);

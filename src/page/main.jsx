@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import dayjs from 'dayjs';
 import { Avatar, Box, Button } from '@mui/material';
+import DidConnect from '@arcblock/did-connect/lib/Connect';
 
 import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
@@ -20,10 +21,46 @@ const formatToDatetime = (date) => {
 };
 
 export default function Main() {
-  const { session, api } = useSessionContext();
-  const { t } = useLocaleContext();
+  const { session, api, connectApi } = useSessionContext();
+  const { t, locale } = useLocaleContext();
   const { preferences } = window.blocklet;
   const { pathname } = window.location;
+
+  const getUserInfo = () => {
+    testConnect();
+    // connectApi.open({
+    //   action: 'get-user-info',
+    //   onSuccess(result) {
+    //     console.log(result);
+    //   },
+    // });
+  };
+
+  function testConnect() {
+    connectApi.open({
+      action: 'profile',
+      locale,
+      messages: {
+        title: 'hihi',
+        scan: 'scancancancan',
+        confirm: 'colors',
+        success: 'successasdasdasdasd',
+      },
+      onSuccess(result) {
+        console.log('onSuccess', result);
+        // setTimeout(() => {
+        //   connectApi.close();
+        // }, 1500);
+      },
+      onClose() {
+        console.log('onClose');
+        connectApi.close();
+      },
+      onError() {
+        console.log('onError');
+      },
+    });
+  }
 
   const rows = !!session.user
     ? [
@@ -124,6 +161,10 @@ export default function Main() {
           color="primary"
           onClick={() => window.trackEvent('user', 'view', session.user?.fullName, 1)}>
           Track Event
+        </Button>
+        <br />
+        <Button sx={{ mt: 2 }} variant="contained" color="primary" onClick={getUserInfo}>
+          Get User Info
         </Button>
       </UserCenter>
     </>
