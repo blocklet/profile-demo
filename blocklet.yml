@@ -27,7 +27,6 @@ interfaces:
     prefix: '*'
     port: BLOCKLET_PORT
     protocol: http
-    proxyBehavior: service
 did: z8iZqG23gxzv6CbTmtWFAipHGLjPEha4BjAtE
 community: https://community.arcblock.io
 documentation: https://developer.blocklet.io

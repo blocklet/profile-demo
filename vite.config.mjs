@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
   const exclude = [];
   const alias = {};
   if (mode === 'production') {
-    alias.lodash = 'lodash-es';
+    // alias.lodash = 'lodash-es';
   }
   if (env.ENABLED_ALIAS_BLOCKLET === 'true') {
     const excludeLibs = [
