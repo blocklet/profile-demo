@@ -63,7 +63,7 @@ export default defineConfig(({ mode }) => {
         srcDir: 'src',
         filename: 'service-worker.js',
         injectManifest: {
-          maximumFileSizeToCacheInBytes: 4194304,
+          maximumFileSizeToCacheInBytes: 6291456,
         },
       }),
     ],
