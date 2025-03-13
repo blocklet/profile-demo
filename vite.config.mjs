@@ -71,6 +71,7 @@ export default defineConfig(({ mode }) => {
       alias,
     },
     server: {
+      force: true,
       fs: {
         strict: false,
       },
