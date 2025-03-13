@@ -1,3 +1,8 @@
+## 1.15.2 (March 13, 2025)
+
+- fix(did-connect): unable to pop up window for connecting to DID Spaces in some cases
+- feat(did-connect): display images correctly on mobile devices
+
 ## 1.15.1 (March 12, 2025)
 
 - chore: update deps
