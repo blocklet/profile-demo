@@ -1,3 +1,7 @@
+## 1.15.3 (March 16, 2025)
+
+- chore: bump deps
+
 ## 1.15.2 (March 13, 2025)
 
 - fix: unable to pop up window for connecting to DID Spaces in some cases
@@ -5,7 +9,6 @@
 ## 1.15.1 (March 12, 2025)
 
 - chore: update deps
-- [skip ci] Update README.md
 
 ## 1.15.0 (March 04, 2025)
 
