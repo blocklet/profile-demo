@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.15.3",
+  "version": "1.15.4",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -32,10 +32,10 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.12.25",
-    "@arcblock/ux": "^2.12.25",
+    "@arcblock/did-connect": "^2.12.27",
+    "@arcblock/ux": "^2.12.27",
     "@blocklet/js-sdk": "^1.16.40",
-    "@blocklet/ui-react": "^2.12.25",
+    "@blocklet/ui-react": "^2.12.27",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",

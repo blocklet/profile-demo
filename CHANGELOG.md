@@ -1,3 +1,7 @@
+## 1.15.4 (March 17, 2025)
+
+- chore: bump deps
+
 ## 1.15.3 (March 16, 2025)
 
 - chore: bump deps

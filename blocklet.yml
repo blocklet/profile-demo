@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.15.3
+version: 1.15.4
 main: api/index.js
 author:
   name: ArcBlock
@@ -54,7 +54,7 @@ environments:
   - name: ENABLED_SERVICE_WORKER
     description: Enable service worker or not?
     required: false
-    default: 'true'
+    default: 'false'
     secure: false
     shared: true
 scripts:
