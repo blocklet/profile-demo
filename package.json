@@ -32,10 +32,10 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.12.27",
-    "@arcblock/ux": "^2.12.27",
+    "@arcblock/did-connect": "^2.12.44",
+    "@arcblock/ux": "^2.12.44",
     "@blocklet/js-sdk": "^1.16.40",
-    "@blocklet/ui-react": "^2.12.27",
+    "@blocklet/ui-react": "^2.12.44",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
@@ -51,7 +51,7 @@
     "react-router-dom": "^6.28.0",
     "vite": "^5.4.11",
     "vite-node": "^2.1.5",
-    "vite-plugin-blocklet": "^0.9.25",
+    "vite-plugin-blocklet": "^0.9.28",
     "vite-plugin-pwa": "^0.21.1",
     "vite-plugin-require": "^1.2.14",
     "vite-plugin-svgr": "^4.3.0"
