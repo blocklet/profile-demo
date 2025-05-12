@@ -1,5 +1,5 @@
 name: profile-demo
-version: 1.15.9
+version: 1.15.10
 main: api/index.js
 author:
   name: ArcBlock
