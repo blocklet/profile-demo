@@ -1,3 +1,7 @@
+## 1.15.10 (May 12, 2025)
+
+- chore: update deps
+
 ## 1.15.9 (April 16, 2025)
 
 - chore: bump deps and dedupe
