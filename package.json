@@ -1,6 +1,6 @@
 {
   "name": "profile-demo",
-  "version": "1.15.10",
+  "version": "1.15.11",
   "main": "index.js",
   "author": "ArcBlock",
   "license": "MIT",
@@ -23,19 +23,19 @@
   "dependencies": {
     "@blocklet/logger": "^1.16.43",
     "@blocklet/sdk": "^1.16.43",
-    "@ocap/mcrypto": "^1.20.8",
-    "@ocap/util": "^1.20.8",
-    "@ocap/wallet": "^1.20.8",
+    "@ocap/mcrypto": "^1.20.12",
+    "@ocap/util": "^1.20.12",
+    "@ocap/wallet": "^1.20.12",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "@arcblock/did-connect": "^2.13.29",
-    "@arcblock/ux": "^2.13.29",
+    "@arcblock/did-connect": "^2.13.61",
+    "@arcblock/ux": "^2.13.61",
     "@blocklet/js-sdk": "^1.16.43",
-    "@blocklet/ui-react": "^2.13.29",
+    "@blocklet/ui-react": "^2.13.61",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",

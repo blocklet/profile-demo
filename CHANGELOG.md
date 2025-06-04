@@ -1,3 +1,8 @@
+## 1.15.11 (June 04, 2025)
+
+- chore: update deps
+- [skip ci] Update README.md
+
 ## 1.15.10 (May 12, 2025)
 
 - chore: update deps
