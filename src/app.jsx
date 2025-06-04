@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ThemeProvider } from '@arcblock/ux/lib/Theme';
+import { ConfigProvider } from '@arcblock/ux/lib/Config';
 import { LocaleProvider } from '@arcblock/ux/lib/Locale/context';
 import withTracker from '@arcblock/ux/lib/withTracker';
 
@@ -10,17 +10,15 @@ import Main from './page/main';
 
 function App() {
   return (
-    <ThemeProvider>
-      <LocaleProvider translations={translations}>
-        <SessionProvider>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="*" element={<Main />} />
-            {/* <Route path="*" element={<Navigate to="/" />} /> */}
-          </Routes>
-        </SessionProvider>
-      </LocaleProvider>
-    </ThemeProvider>
+    <ConfigProvider translations={translations}>
+      <SessionProvider>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="*" element={<Main />} />
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
+        </Routes>
+      </SessionProvider>
+    </ConfigProvider>
   );
 }
 
