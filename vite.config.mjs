@@ -12,6 +12,11 @@ export default defineConfig(({ mode }) => {
   const alias = {};
   if (mode === 'production') {
     // alias.lodash = 'lodash-es';
+    alias['lodash.assign'] = 'lodash/assign';
+    alias['lodash.clonedeep'] = 'lodash/cloneDeep';
+    alias['lodash.isequal'] = 'lodash/isEqual';
+    alias['lodash.merge'] = 'lodash/merge';
+    alias['lodash.find'] = 'lodash/find';
   }
   if (env.ENABLED_ALIAS_BLOCKLET === 'true') {
     const excludeLibs = [
@@ -69,6 +74,16 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias,
+      dedupe: [
+        //
+        '@mui/material',
+        // '@mui/utils', // 由于其他包中还使用了 mui/utils 的旧版本，所以不能进行强制去重
+        '@mui/icons-material',
+        'react',
+        'react-dom',
+        'lodash',
+        'bn.js',
+      ],
     },
     server: {
       force: true,
