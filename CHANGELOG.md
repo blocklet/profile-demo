@@ -1,3 +1,9 @@
+## 1.16.0 (July 15, 2025)
+
+- chore(deps): update deps
+- chore(deps): optimize bundle size
+- [skip ci] Update README.md
+
 ## 1.15.12 (June 06, 2025)
 
 - chore: update dpes

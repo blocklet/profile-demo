@@ -6,7 +6,7 @@ import InfoRow from '@arcblock/ux/lib/InfoRow';
 import { useLocaleContext } from '@arcblock/ux/lib/Locale/context';
 import Tag from '@arcblock/ux/lib/Tag';
 import DID from '@arcblock/ux/lib/DID';
-import { UserCenter } from '@blocklet/ui-react';
+import { UserCenter } from '@blocklet/ui-react/lib/UserCenter';
 import uniqBy from 'lodash/uniqBy';
 
 import { useSessionContext } from '../libs/session';
