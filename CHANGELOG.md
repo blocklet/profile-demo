@@ -1,3 +1,11 @@
+## 1.16.3 (July 21, 2025)
+
+- chore(deps): update deps
+
+## 1.16.2 (July 16, 2025)
+
+- [skip ci] Update README.md
+
 ## 1.16.1 (July 15, 2025)
 
 - chore(deps): update deps
