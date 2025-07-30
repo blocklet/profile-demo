@@ -1,3 +1,7 @@
+## 1.16.4 (July 30, 2025)
+
+- chore(deps): update deps
+
 ## 1.16.3 (July 21, 2025)
 
 - chore(deps): update deps
