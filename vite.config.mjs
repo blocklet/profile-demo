@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => {
     ];
     if (env.ARCBLOCK_UX_BASE_PATH) {
       alias['@arcblock/ux/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/ux/src`;
-      alias['@arcblock/did-connect/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/did-connect/src`;
+      alias['@arcblock/did-connect-react/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/did-connect/src`;
       alias['@blocklet/ui-react/lib'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-ui-react/src`;
       alias['@blocklet/ui-react'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/blocklet-ui-react/src/index.ts`;
       alias['@arcblock/bridge'] = `${env.ARCBLOCK_UX_BASE_PATH}/packages/bridge/src/index.js`;

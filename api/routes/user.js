@@ -1,4 +1,4 @@
-const AuthService = require('@blocklet/sdk/service/auth');
+const { BlockletService: AuthService } = require('@blocklet/sdk/service/auth');
 const EventBus = require('@blocklet/sdk/service/eventbus');
 const middlewares = require('@blocklet/sdk/lib/middlewares');
 const component = require('@blocklet/sdk/lib/component');

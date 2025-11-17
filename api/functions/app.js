@@ -4,7 +4,7 @@ const cors = require('cors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const fallback = require('@blocklet/sdk/lib/middlewares/fallback');
+const middleware = require('@blocklet/sdk/lib/middlewares');
 const logger = require('@blocklet/logger');
 
 const userRoutes = require('../routes/user');
@@ -33,7 +33,7 @@ if (isProduction || process.env.PREVIEW) {
 
   const staticDir = path.resolve(__dirname, '../../', 'dist');
   server.use(express.static(staticDir, { maxAge: '365d', index: false }));
-  server.use(fallback('index.html', { root: staticDir }));
+  server.use(middleware.fallback('index.html', { root: staticDir }));
 
   server.use((req, res) => {
     res.status(404).send('404 NOT FOUND');
