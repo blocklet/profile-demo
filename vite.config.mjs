@@ -60,16 +60,7 @@ export default defineConfig(({ mode }) => {
       svgr(),
       createBlockletPlugin({
         disableDebug: true,
-        chunkSizeLimit: 1000000,
-        // disableNodePolyfills: true,
-        // nodePolyfillsOptions: {
-        //   include: ['http'],
-        //   globals: {
-        //     buffer: false,
-        //     global: false,
-        //     process: false,
-        //   },
-        // },
+        chunkSizeLimit: 4000,
       }),
     ],
     resolve: {
