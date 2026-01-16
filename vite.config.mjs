@@ -2,7 +2,6 @@ import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 import { createBlockletPlugin } from 'vite-plugin-blocklet';
-import { VitePWA } from 'vite-plugin-pwa';
 import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
@@ -11,12 +10,12 @@ export default defineConfig(({ mode }) => {
   const exclude = [];
   const alias = {};
   if (mode === 'production') {
-    // alias.lodash = 'lodash-es';
-    alias['lodash.assign'] = 'lodash/assign';
-    alias['lodash.clonedeep'] = 'lodash/cloneDeep';
-    alias['lodash.isequal'] = 'lodash/isEqual';
-    alias['lodash.merge'] = 'lodash/merge';
-    alias['lodash.find'] = 'lodash/find';
+    alias.lodash = 'lodash-es';
+    alias['lodash.assign'] = 'lodash-es/assign';
+    alias['lodash.clonedeep'] = 'lodash-es/cloneDeep';
+    alias['lodash.isequal'] = 'lodash-es/isEqual';
+    alias['lodash.merge'] = 'lodash-es/merge';
+    alias['lodash.find'] = 'lodash-es/find';
   }
   if (env.ENABLED_ALIAS_BLOCKLET === 'true') {
     const excludeLibs = [
@@ -59,17 +58,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       svgr(),
-      createBlockletPlugin(),
-      VitePWA({
-        manifest: false,
-        injectRegister: false,
-        registerType: 'autoUpdate',
-        strategies: 'injectManifest',
-        srcDir: 'src',
-        filename: 'service-worker.js',
-        injectManifest: {
-          maximumFileSizeToCacheInBytes: 6291456,
-        },
+      createBlockletPlugin({
+        disableDebug: true,
+        chunkSizeLimit: 4000,
       }),
     ],
     resolve: {
@@ -83,6 +74,8 @@ export default defineConfig(({ mode }) => {
         'react-dom',
         'lodash',
         'bn.js',
+        'axios',
+        'buffer',
       ],
     },
     server: {
@@ -94,6 +87,9 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       // force: true,
       exclude,
+    },
+    build: {
+      reportCompressedSize: false,
     },
   };
 });
