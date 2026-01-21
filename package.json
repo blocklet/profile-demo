@@ -44,7 +44,7 @@
     "dayjs": "^1.11.13",
     "dotenv-flow": "^4.1.0",
     "flat": "^5.0.2",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.23",
     "nodemon": "^3.1.7",
     "prop-types": "^15.8.1",
     "react": "19.1.0",
