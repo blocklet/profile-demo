@@ -1,12 +1,11 @@
-import React from 'react';
+import { lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ConfigProvider } from '@arcblock/ux/lib/Config';
-import { LocaleProvider } from '@arcblock/ux/lib/Locale/context';
 import withTracker from '@arcblock/ux/lib/withTracker';
 
 import { SessionProvider } from './libs/session';
 import { translations } from './locales';
-import Main from './page/main';
+const Main = lazy(() => import('./page/main'));
 
 function App() {
   return (

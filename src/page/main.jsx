@@ -19,10 +19,9 @@ const formatToDatetime = (date) => {
 };
 
 export default function Main() {
-  const { session, api } = useSessionContext();
+  const { session } = useSessionContext();
   const { t } = useLocaleContext();
   const { preferences } = window.blocklet;
-  const { pathname } = window.location;
 
   const rows = !!session.user
     ? [
@@ -67,6 +66,10 @@ export default function Main() {
       ].filter(Boolean)
     : [];
 
+  const handleLogin = () => {
+    session.login();
+  };
+
   return (
     <>
       <UserCenter
@@ -79,7 +82,10 @@ export default function Main() {
               color: '#888',
               py: 5,
             }}>
-            You are not logged in yet! {preferences.welcome}
+            <p>You are not logged in yet! {preferences.welcome}</p>
+            <Button variant="contained" onClick={handleLogin}>
+              Login
+            </Button>
           </Box>
         }>
         <Box
