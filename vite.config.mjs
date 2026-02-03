@@ -90,6 +90,16 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       reportCompressedSize: false,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true, // 移除 console.log
+          drop_debugger: true,
+        },
+        format: {
+          comments: false, // 删除注释
+        },
+      },
     },
   };
 });
